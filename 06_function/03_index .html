@@ -1,0 +1,37 @@
+<script>
+      let amou = 10000;
+
+
+
+      function acount() {
+            console.log(`amout : ${amou}`);
+      }
+      function depe() {
+            let dep = parseInt(prompt("dep"));
+            console.log(dep);
+            amou += dep;
+            console.log(`deposite : ${dep}`);
+            console.log(`total amount : ${amou}`);
+
+      }
+      function wide() {
+            let wid = parseInt(prompt("wid"));
+            amou -= wid;
+
+            console.log(`wid : ${wid}`);
+            console.log(`amout : ${amou}`);
+      }
+
+      let useValue = parseInt(prompt("value"))
+
+      if (useValue == 1) {
+            acount()
+      } else if (useValue == 2) {
+            depe()
+      } else if (useValue == 3) {
+            wide()
+      } else {
+            console.log("invalide choiss");
+            useValue = parseInt(prompt("value"))
+      }
+</script>

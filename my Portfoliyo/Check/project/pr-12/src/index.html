@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/font/fonts/remixicon.css">
+    <link rel="stylesheet" href="../dist/font/inter/stylesheet.css">
+    <link rel="stylesheet" href="../dist/output.css">
+    <style>
+        * {
+            box-sizing: border-box !important;
+        }
+
+        .open-nav {
+            left: 0 !important;
+            transition: 0.8s all;
+        }
+    </style>
+</head>
+
+<body class="font-['Inter'] bg-slate-50 box-border">
+    <!-- top-to-back -->
+    <a href="javascript:void(0)"
+        class="h-10 w-10 leading-10 top-to-back text-center border-2 fixed bottom-6 right-6 rounded-md border-yellow-400 inline-block "><i
+            class="ri-arrow-up-double-line text-2xl "></i></a>
+    <header>
+        <div class="border-b border-gray-200 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="top-bar-inner py-3 md:mx-4">
+                    <div class="flex justify-between">
+                        <div>
+                            <ul class="flex items-center">
+                                <li>
+                                    <a href="javascript:void(0)" class=" inline-block text-sm me-7 ">Account</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class=" inline-block text-sm me-7">Track Order</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class=" inline-block text-sm ">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hidden md:block">
+                            <ul class="flex items-center">
+                                <li>
+                                    <a href="javascript:void(0)" class="flex items-center text-sm ms-7">
+                                        <img src="../dist/img/country-logo.png" alt="country-logo" title="country-logo"
+                                            class="me-1">United State
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="text-sm ms-7 inline-block">Track Order
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="text-sm ms-7 inline-block">Support
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="saerch-bar shadow bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between py-5 items-center md:mx-4">
+                    <a href="javascript:void(0)" class="text-2xl inline-block  xl:hidden" id="toggle-manu">
+                        <i class="ri-menu-2-fill"></i>
+                    </a>
+                    <a href="javascript:void(0)" class="javascript:void(0)">
+                        <img src="../dist/img/logo.svg" alt="logo" title="logo">
+                    </a>
+                    <div class="search-items relative hidden lg:block">
+                        <input type="text" class=" py-2 border outline-none">
+                        <button
+                            class="py-2 bg-yellow-400 px-6 font-semibold absolute top-0 left-full border border-s-0">Search</button>
+                    </div>
+                    <div class="flex">
+                        <div class="relative ms-5 hidden lg:block">
+                            <a href="javascript:void(0)">
+                                <i class="ri-refresh-line text-2xl"></i>
+                                <span
+                                    class="bg-yellow-400 absolute h-[18px] w-[18px] -top-2.5 -right-2.5 rounded-full text-center leading-[18px] text-[10px]">2</span>
+                            </a>
+                        </div>
+                        <div class="relative ms-5 hidden lg:block">
+                            <a href="javascript:void(0)">
+                                <i class="ri-heart-3-line text-2xl"></i>
+                                <span
+                                    class="bg-yellow-400 absolute h-[18px] w-[18px] -top-2.5 -right-2.5 rounded-full text-center leading-[18px] text-[10px]">1</span>
+                            </a>
+                        </div>
+                        <div class="relative ms-5">
+                            <a href="javascript:void(0)">
+                                <i class="ri-shopping-bag-line text-2xl"></i>
+                                <span
+                                    class="bg-yellow-400 absolute h-[18px] w-[18px] -top-2.5 -right-2.5 rounded-full text-center leading-[18px] text-[10px]">15</span>
+                            </a>
+                        </div>
+                        <div class="relative ms-5 hidden lg:block">
+                            <a href="javascript:void(0)" class="inline-block">
+                                <i class="ri-user-3-line text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="nav-bar overflow-scroll lg:overflow-visible bg-slate-300 lg:bg-amber-400 fixed -left-[200%] top-0 bottom-0 lg:static transition-all duration-[0.8s]">
+            <div class="p-3 lg:hidden">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <a href="javascript:void(0)" class="relative me-5">
+                            <i class="ri-refresh-line text-2xl"></i>
+                            <span
+                                class="bg-yellow-400 absolute h-[18px] w-[18px] -top-2.5 -right-2.5 rounded-full text-center leading-[18px] text-[10px]">2</span>
+                        </a>
+                        <a href="javascript:void(0)" class="relative me-5">
+                            <i class="ri-heart-3-line text-2xl"></i>
+                            <span
+                                class="bg-yellow-400 absolute h-[18px] w-[18px] -top-2.5 -right-2.5 rounded-full text-center leading-[18px] text-[10px]">1</span>
+                        </a>
+                    </div>
+                    <a href="javascript:void(0)"
+                        class="text-2xl rounded-full h-10 w-10 bg-amber-400 inline-block text-center leading-10">
+                        <i class="ri-close-line close-nav"></i>
+                    </a>
+                </div>
+                <div class="search-items relative my-4">
+                    <input type="text" class="border outline-none py-1 placeholder:text-sm px-2"
+                        placeholder="Search Product...">
+                    <button class=" bg-yellow-400 py-1 px-2 font-semibold absolute top-0 right-0 border border-s-0"><i
+                            class="ri-search-line"></i></button>
+                </div>
+                <div class="text-center">
+                    <a href="javascript:void(0)" class="font-semibold text-md Categories">Categories</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)" class="font-semibold Main-Manu">Main Manu</a>
+                </div>
+            </div>
+            <div class="container mx-auto px-4">
+                <div class="lg:flex lg:items-center lg:justify-between md:mx-4">
+                    <div class="lg:relative static w-full lg:w-52 hidden lg:block" id="Categories">
+                        <a href="javascript:void(0)"
+                            class="categorie-manu border py-3 px-8 lg:inline-block rounded-t text-sm font-semibold bg-white hidden">
+                            <i class="ri-menu-2-line"></i> All
+                            Categories
+                            <i class="ri-arrow-right-s-line align-middle"></i>
+                        </a>
+                        <ul class="bg-white lg:w-48 px-2 static lg:absolute lg:top-full lg:left-0 lg:hidden"
+                            id="categorieItemes">
+                            <li>
+                                <a href="javascript:void(0)" class="inline-block py-2 border-b w-full ">
+                                    <i class="ri-cellphone-line align-middle"></i>
+                                    <span class="text-xs">Mobile & Laptops</span>
+                                    <i class="ri-arrow-right-s-line align-middle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="inline-block py-2 border-b w-full">
+                                    <i class="ri-gamepad-line align-middle"></i>
+                                    <span class="text-xs">Gaming Entertainment</span>
+                                    <i class="ri-arrow-right-s-line align-middle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="inline-block py-2 border-b w-full">
+                                    <i class="ri-camera-line align-middle"></i>
+                                    <span class="text-xs">Image & Video</span>
+                                    <i class="ri-arrow-right-s-line align-middle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="inline-block py-2 border-b w-full">
+                                    <i class="ri-car-line align-middle"></i>
+                                    <span class="text-xs"> Vehicles</span>
+                                    <i class="ri-arrow-right-s-line align-middle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="inline-block py-2 border-b w-full">
+                                    <i class="ri-basketball-line align-middle"></i>
+                                    <span class="text-xs">Food & Drinks</span>
+                                    <i class="ri-arrow-right-s-line align-middle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="inline-block py-2 border-b w-full">
+                                    <i class="ri-basketball-line align-middle"></i>
+                                    <span class="text-xs">Sport</span>
+                                    <i class="ri-arrow-right-s-line align-middle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="inline-block py-2 border-b w-full">
+                                    <i class="ri-basketball-line align-middle"></i>
+                                    <span class="text-xs">Toilet & Sanitation</span>
+                                    <i class="ri-arrow-right-s-line align-middle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="inline-block py-2 border-b w-full">
+                                    <i class="ri-basketball-line align-middle"></i>
+                                    <span class="text-xs">Makeup Corner</span>
+                                    <i class="ri-arrow-right-s-line align-middle"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" class="inline-block py-2 w-full">
+                                    <i class="ri-basketball-line align-middle"></i>
+                                    <span class="text-xs">Baby Items</span>
+                                    <i class="ri-arrow-right-s-line align-middle"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="Main-Manu">
+                        <nav>
+                            <ul class="lg:flex lg:items-center flex-col lg:flex-row bg-white lg:bg-transparent px-4">
+                                <li><a href="javascript:void(0)"
+                                        class="lg:mx-5 inline-block py-2 border-b lg:border-0 w-full lg;w-auto lg:py-4 text-sm font-semibold ">Homepage
+                                        <i class="ri-arrow-down-s-line"></i></a></li>
+                                <li><a href="javascript:void(0)"
+                                        class="lg:mx-5 inline-block py-2 border-b lg:border-0 w-full lg;w-auto lg:py-4 text-sm font-semibold">Shop
+                                        <i class="ri-arrow-down-s-line"></i></a></li>
+                                <li><a href="javascript:void(0)"
+                                        class="lg:mx-5 inline-block py-2 border-b lg:border-0 w-full lg;w-auto lg:py-4 text-sm font-semibold">Pages
+                                        <i class="ri-arrow-down-s-line"></i></a></li>
+                                <li><a href="javascript:void(0)"
+                                        class="lg:mx-5 inline-block py-2 border-b lg:border-0 w-full lg;w-auto lg:py-4 text-sm font-semibold">About</a>
+                                </li>
+                                <li><a href="javascript:void(0)"
+                                        class="lg:mx-5 inline-block py-2 border-b lg:border-0 w-full lg;w-auto lg:py-4 text-sm font-semibold">Blog</a>
+                                </li>
+                                <li><a href="javascript:void(0)"
+                                        class="lg:mx-5 inline-block py-2 border-b lg:border-0 w-full lg;w-auto lg:py-4 text-sm font-semibold">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mt-6 lg:mt-0">
+                        <a href="javascript:void(0)"
+                            class="py-2 px-4 bg-black text-white text-sm font-semibold inline-block">
+                            Become a Seller
+                            <i class="ri-arrow-right-s-line align-middle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- banner -->
+
+        <section class="banner mt-12">
+            <div class="xl:container mx-auto px-4">
+                <div class="banner-inner md:mx-4">
+                    <div class="flex flex-wrap">
+                        <div class="xl:w-8/12 w-full">
+                            <div class="banner-items">
+                                <a href="javascript:void(0)" class="block xl:pe-7 ">
+                                    <img src="../dist/img/banner-1.png" alt=""
+                                        class="w-full xl:h-[600px]  object-cover">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="xl:w-4/12 w-full">
+                            <div class="banner-items">
+                                <div class="flex xl:flex-col items-center">
+                                    <div class="w-6/12 xl:w-full">
+                                        <a href="javascript:void(0)" class="block">
+                                            <img src="../dist/img/banner-2.png" alt=""
+                                                class="w-full xl:h-[288px] object-cover">
+                                        </a>
+                                    </div>
+                                    <div class="w-6/12 xl:w-full">
+                                        <a href="javascript:void(0)" class="block xl:pt-6">
+                                            <img src="../dist/img/banner-3.png" alt=""
+                                                class="w-full xl:h-[288px] object-cover">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--services -->
+        <section class="services my-12">
+            <div class="xl:container mx-auto px-4">
+                <div class="services-inner md:mx-4 p-6 bg-white shadow-sm">
+                    <div class="flex flex-wrap items-center ">
+                        <div class="xl:w-3/12 lg:w-6/12 w-full">
+                            <div class="services-itmes mb-6 xl:mb-0">
+                                <ul class="flex">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-12 mr-3 stroke-yellow-400 stroke-1 ">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg>
+                                    </li>
+                                    <li>
+                                        <h6 class="font-bold mb-1">Free Shipping</h6>
+                                        <p class="text-gray-500">When ordering over $100</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-6/12 w-full">
+                            <div class="services-itmes  mb-6 xl:mb-0">
+                                <ul class="flex">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-12 mr-3 stroke-yellow-400 stroke-1">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                        </svg>
+
+                                    </li>
+                                    <li>
+                                        <h6 class="font-bold mb-1">Free Return</h6>
+                                        <p class="text-gray-500">Get Return within 30 days</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-6/12 w-full">
+                            <div class="services-itmes mb-6 lg:mb-0">
+                                <ul class="flex">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-12 mr-3 stroke-yellow-400 stroke-1">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                                        </svg>
+                                    </li>
+                                    <li>
+                                        <h6 class="font-bold mb-1">Free Shipping</h6>
+                                        <p class="text-gray-500">100% Secure Online Paymen</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-6/12 w-full">
+                            <div class="services-itmes">
+                                <ul class="flex">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-12 mr-3 stroke-yellow-400 stroke-1">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
+                                        </svg>
+
+                                    </li>
+                                    <li>
+                                        <h6 class="font-bold mb-1">Best Quality</h6>
+                                        <p class="text-gray-500">Original Product Guarenteed</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gamer World -->
+
+        <section class="gamer-world">
+            <div class="xl:container mx-auto px-4">
+                <div class="game-world-title md:mx-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="font-semibold text-xl sm:text-3xl">Gamer World</h2>
+                        <a href="javascript:void(0)" class="font-semibold flex">View More <i
+                                class="ri-arrow-right-line ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="gamer-world-inner my-12">
+                    <div class="flex flex-wrap">
+                        <div class="xl:w-3/12">
+                            <div class="gamer-world-items pb-[226px] mx-4 shadow-sm hidden xl:block my-3 md:m-4"
+                                style="background: url(../dist/img/download.jpeg) 0% 60% / cover no-repeat;">
+                                <div class="p-8">
+                                    <h4 class="font-semibold">Mobile & Tablet</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="text-gray-500 hover:text-black hover:underline my-1 inline-block">Xioami</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="text-gray-500 hover:text-black hover:underline my-1 inline-block">Apple</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="text-gray-500 hover:text-black hover:underline my-1 inline-block">Google</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="text-gray-500 hover:text-black hover:underline my-1 inline-block">Samsung</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="text-black my-1 font-semibold inline-block">
+                                                Shop Now
+                                                <i class="ri-arrow-right-line"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-1 (1).jpg" alt=""
+                                            class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-[82px]">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-2.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-[82px]">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-3.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-[82px]">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- shop-brand -->
+
+        <section class="shop-brand">
+            <div class="xl:container mx-auto px-4">
+                <div class="shop-brand-title md:mx-4">
+                    <h2 class="font-semibold text-xl sm:text-3xl">Shop by Brand</h2>
+                </div>
+                <div class="shop-brand-inner my-12 md:mx-4">
+                    <div class="flex flex-wrap">
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-1.png" alt="" class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-2.png" alt="" class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-3.png" alt="" class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-4.png" alt="" class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-5.png" alt="" class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-6.png" alt="" class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-7.png" alt="" class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-8.png" alt="" class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-9.png" alt="" class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-10.png" alt=""
+                                    class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-11.png" alt=""
+                                    class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 md:w-3/12 w-6/12">
+                            <div class="shop-brand-img bg-white flex items-center h-36 leading-[130px] m-0.5">
+                                <img src="../dist/img/brand-12.png" alt=""
+                                    class="w-full lg:px-12 md:px-6 sm:px-12 px-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flash Sale -->
+
+        <section class="flash-sale my-12">
+            <div class="container mx-auto px-4">
+                <div class="flash-sale-inner md:mx-4">
+                    <div class="flex flex-wrap xl:items-center">
+                        <div class="xl:w-6/12 w-full">
+                            <div class="flash-sale-items p-10 xl:me-4 h-full xl:py-[90px]"
+                                style="background: url(../dist/img/campaign-cover-countdown.jpg)0% 60% / cover no-repeat;">
+                                <a href="javascript:void(0)" class="h-full">
+                                    <ul class="flex items-center justify-evenly">
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="w-14 h-14 leading-[56px] sm:w-24 sm:h-24 sm:leading-[96px] text-center bg-white inline-block rounded-full text-4xl text-red-500 font-semibold"
+                                                id="days" `>28</a>
+                                            <p class="text-center text-semibold text-lg mt-3">Days</p>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="w-14 h-14 leading-[56px] sm:w-24 sm:h-24 sm:leading-[96px] text-center bg-white inline-block rounded-full text-4xl text-blue-500 font-semibold">15</a>
+                                            <p class="text-center text-semibold text-lg mt-3">Hours</p>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="w-14 h-14 leading-[56px] sm:w-24 sm:h-24 sm:leading-[96px] text-center bg-white inline-block rounded-full text-4xl text-green-500 font-semibold">5</a>
+                                            <p class="text-center text-semibold text-lg mt-3">minutes</p>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="w-14 h-14 leading-[56px] sm:w-24 sm:h-24 sm:leading-[96px] text-center bg-white inline-block rounded-full text-4xl text-pink-500 font-semibold">55</a>
+                                            <p class="text-center text-semibold text-lg mt-3">Seconds</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                                <h2 class="font-semibold text-4xl mb-7 mt-10">WOO! Flash Sale</h2>
+                                <a href="javascript:void(0)"
+                                    class="inline-block underline underline-offset-8 decoration-yellow-400">Shop
+                                    Now
+                                    <i class="ri-arrow-right-s-line"></i></a>
+                            </div>
+                        </div>
+                        <div class="xl:w-6/12 w-full">
+                            <div style="background: url(../dist/img/download-app-cover.png) 0% 0% /cover no-repeat;"
+                                class="flash-sale-items p-10 xl:ms-4 mt-8 xl:mt-0">
+                                <h6 class="text-xs font-semibold">MOBILE APP VERSION</h6>
+                                <h2 class="text-2xl font-semibold my-8">
+                                    Get Our <span class="text-red-500 underline underline-offset-8">Mobile
+                                        App</span>
+                                    <br> It’s Make easy for you life !
+                                </h2>
+                                <div class="flex items-center">
+                                    <a href="javascript:void(0)" class="me-3"><img src="../dist/img/play-store.png"
+                                            alt=""></a>
+                                    <a href="javascript:void(0)"><img src="../dist/img/apple-store.png" alt=""></a>
+
+                                </div>
+                                <img src="../dist/img/app-screen.png" alt="" class="mt-8" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selling Products -->
+
+        <section class="selling-products">
+            <div class="xl:container mx-auto px-4">
+                <div class="selling-products-title md:mx-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="font-semibold text-xl sm:text-3xl">Top Selling Products</h2>
+                        <a href="javascript:void(0)" class="font-semibold flex">View More <i
+                                class="ri-arrow-right-line ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="selling-products-inner py-12">
+                    <div class="flex flex-wrap items-center">
+                        <div class="md:w-6/12 w-full">
+                            <div
+                                class="selling-top-items shadow-sm group overflow-hidden p-6 relative bg-white md:m-4 my-4 md:my-0">
+                                <div class="flex items-center">
+                                    <div class="w-6/12">
+                                        <div class="selling-products-img">
+                                            <img src="../dist/img/product-img-4.jpg" class="mx-auto object-cover"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-6/12">
+                                        <div class="selling-products-content">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <h5 class="font-semibold text-md py-2 hover:text-blue-600">
+                                                Xoggle aute et pariatur adipisicing nostrud et...
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$27.27
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$18.73</p>
+                                                </li>
+                                            </ul>
+                                            <a href="javascript:void(0)"
+                                                class="text-sm font-semibold bg-amber-400 px-4 inline-block py-1 mt-3">
+                                                Add To Cart
+                                            </a>
+                                            <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                            group-hover:right-2">
+                                                <i
+                                                    class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                                <i
+                                                    class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                                <i
+                                                    class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-6/12 w-full">
+                            <div
+                                class="selling-top-items shadow-sm group overflow-hidden p-6 relative bg-white md:m-4 my-4 md:my-0">
+                                <div class="flex items-center">
+                                    <div class="w-6/12">
+                                        <div class="selling-products-img">
+                                            <img src="../dist/img/product-img-5.jpeg" class="mx-auto object-cover"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-6/12">
+                                        <div class="selling-products-content">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <h5 class="font-semibold text-md py-2 hover:text-blue-600">
+                                                Xoggle aute et pariatur adipisicing nostrud et...
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$27.27
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$18.73</p>
+                                                </li>
+                                            </ul>
+                                            <a href="javascript:void(0)"
+                                                class="text-sm font-semibold bg-amber-400 px-4 inline-block py-1 mt-3">
+                                                Add To Cart
+                                            </a>
+                                            <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                            group-hover:right-2">
+                                                <i
+                                                    class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                                <i
+                                                    class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                                <i
+                                                    class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-6/12 w-full">
+                            <div
+                                class="selling-top-items shadow-sm group overflow-hidden p-6 relative bg-white md:m-4 my-4 md:my-0">
+                                <div class="flex items-center">
+                                    <div class="w-6/12">
+                                        <div class="selling-products-img">
+                                            <img src="../dist/img/product-img-6.jpg" class="mx-auto object-cover"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-6/12">
+                                        <div class="selling-products-content">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <h5 class="font-semibold text-md py-2 hover:text-blue-600">
+                                                Xoggle aute et pariatur adipisicing nostrud et...
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$27.27
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$18.73</p>
+                                                </li>
+                                            </ul>
+                                            <a href="javascript:void(0)"
+                                                class="text-sm font-semibold bg-amber-400 px-4 inline-block py-1 mt-3">
+                                                Add To Cart
+                                            </a>
+                                            <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                            group-hover:right-2">
+                                                <i
+                                                    class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                                <i
+                                                    class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                                <i
+                                                    class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-6/12 w-full">
+                            <div
+                                class="selling-top-items shadow-sm group overflow-hidden p-6 relative bg-white md:m-4 my-4 md:my-0">
+                                <div class="flex items-center">
+                                    <div class="w-6/12">
+                                        <div class="selling-products-img ">
+                                            <img src="../dist/img/product-img-7.jpg" class="mx-auto object-cover"
+                                                alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-6/12">
+                                        <div class="selling-products-content">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <h5 class="font-semibold text-md py-2 hover:text-blue-600">
+                                                Xoggle aute et pariatur adipisicing nostrud et...
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$27.27
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$18.73</p>
+                                                </li>
+                                            </ul>
+                                            <a href="javascript:void(0)"
+                                                class="text-sm font-semibold bg-amber-400 px-4 inline-block py-1 mt-3">
+                                                Add To Cart
+                                            </a>
+                                            <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                            group-hover:right-2">
+                                                <i
+                                                    class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                                <i
+                                                    class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                                <i
+                                                    class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Saller -->
+
+        <section class="best-saller">
+            <div class="xl:container mx-auto px-4">
+                <div class="best-saller-title md:mx-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="font-semibold text-xl sm:text-3xl">Best Saller</h2>
+                        <a href="javascript:void(0)" class="font-semibold flex">View More <i
+                                class="ri-arrow-right-line ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="best-saller-inner py-12">
+                    <div class="flex flex-wrap items-center md:mx-4">
+                        <div class="xl:w-2/12 lg:w-3/12 md:w-4/12 sm:w-6/12 w-full">
+                            <div class="best-saller-items flex flex-col items-center xl:my-0 my-4">
+                                <div
+                                    class="saller-img w-40 h-40 bg-white rounded-full flex justify-center items-center">
+                                    <img src="../dist/img/saller-1.png" alt="" class="object-cover">
+                                </div>
+                                <a href="javascript:void(0)" class="inline-block mt-2">Shopno BD</a>
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 lg:w-3/12 md:w-4/12 sm:w-6/12 w-full">
+                            <div class="best-saller-items flex flex-col items-center xl:my-0 my-4">
+                                <div
+                                    class="saller-img w-40 h-40 bg-white rounded-full flex justify-center items-center">
+                                    <img src="../dist/img/saller-2.png" alt="" class="object-cover">
+                                </div>
+                                <a href="javascript:void(0)" class="inline-block mt-2">Eecoms Shop</a>
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 lg:w-3/12 md:w-4/12 sm:w-6/12 w-full">
+                            <div class="best-saller-items flex flex-col items-center xl:my-0 my-4">
+                                <div
+                                    class="saller-img w-40 h-40 bg-white rounded-full flex justify-center items-center">
+                                    <img src="../dist/img/saller-3.png" alt="" class="object-cover">
+                                </div>
+                                <a href="javascript:void(0)" class="inline-block mt-2">Fusion X</a>
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 lg:w-3/12 md:w-4/12 sm:w-6/12 w-full">
+                            <div class="best-saller-items flex flex-col items-center xl:my-0 my-4">
+                                <div
+                                    class="saller-img w-40 h-40 bg-white rounded-full flex justify-center items-center">
+                                    <img src="../dist/img/saller-4.png" alt="" class="object-cover">
+                                </div>
+                                <a href="javascript:void(0)" class="inline-block mt-2">Rikayi Rox</a>
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 lg:w-3/12 md:w-4/12 sm:w-6/12 w-full">
+                            <div class="best-saller-items flex flex-col items-center xl:my-0 my-4">
+                                <div
+                                    class="saller-img w-40 h-40 bg-white rounded-full flex justify-center items-center">
+                                    <img src="../dist/img/saller-5.png" alt="" class="object-cover">
+                                </div>
+                                <a href="javascript:void(0)" class="inline-block mt-2">
+                                    Habbriyi
+                                </a>
+                            </div>
+                        </div>
+                        <div class="xl:w-2/12 lg:w-3/12 md:w-4/12 sm:w-6/12 w-full">
+                            <div class="best-saller-items flex flex-col items-center xl:my-0 my-4">
+                                <div
+                                    class="saller-img w-40 h-40 bg-white rounded-full flex justify-center items-center">
+                                    <img src="../dist/img/saller-6.png" alt="" class="object-cover">
+                                </div>
+                                <a href="javascript:void(0)" class="inline-block mt-2">Rayhans</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ad -->
+        <section class="ad my-12 ">
+            <div class="xl:container mx-auto px-4">
+                <div class="ad-inner md:mx-4">
+                    <div class="flex flex-wrap">
+                        <div class="md:w-6/12 w-full">
+                            <div class="ad-img">
+                                <img src="../dist/img/ads-1.png" class="w-full" alt="">
+                            </div>
+                        </div>
+                        <div class="md:w-6/12 w-full">
+                            <div class="ad-img">
+                                <img src="../dist/img/ads-2.png" class="w-full" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Sales -->
+
+
+        <section class="popular-sales">
+            <div class="container mx-auto px-4">
+                <div class="popular-sales-title md:mx-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="font-semibold text-xl sm:text-3xl">Popular Sales</h2>
+                        <a href="javascript:void(0)" class="font-semibold flex">View More <i
+                                class="ri-arrow-right-line ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="popular-sales-inner my-12">
+                    <div class="flex flex-wrap">
+                        <div class="xl:w-3/12">
+                            <div class="popular-sales-items pb-[226px] object-cover mx-4 shadow-sm hidden xl:block my-3 md:m-4 "
+                                style="background: url(../dist/img/section-category-2.jpg) 0% 60% / cover no-repeat;">
+                                <div class="p-8">
+                                    <h4 class="font-semibold">Mobile & Tablet</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="text-gray-500 hover:text-black hover:underline my-1 inline-block">Xioami</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="text-gray-500 hover:text-black hover:underline my-1 inline-block">Apple</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="text-gray-500 hover:text-black hover:underline my-1 inline-block">Google</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="text-gray-500 hover:text-black hover:underline my-1 inline-block">Samsung</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"
+                                                class="text-black my-1 font-semibold inline-block">
+                                                Shop Now
+                                                <i class="ri-arrow-right-line"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-5.jpeg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-[82px]">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-6.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-[82px]">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-7.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-[82px]">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- ad-2 -->
+
+        <section class="ad-2 my-12">
+            <div class="xl:container mx-auto px-4">
+                <div class="ad-img-2 md:mx-4">
+                    <img src="../dist/img/ads-3.png" class="w-full" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+
+        <section class="new-arrivals">
+            <div class="container mx-auto px-4">
+                <div class="new-arrivals-title md:mx-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="font-semibold text-xl sm:text-3xl">New Arrivals</h2>
+                        <a href="javascript:void(0)" class="font-semibold flex">View More <i
+                                class="ri-arrow-right-line ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="new-arrivals-inner my-12">
+                    <div class="flex flex-wrap">
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-1 (1).jpg" alt=""
+                                            class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-2.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-3.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-4.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-5.jpeg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-6.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-7.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-10.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-8.jpeg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-9.jpeg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-2.jpg" alt="" class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 lg:w-4/12 md:w-6/12 w-full">
+                            <div class="new-arrivals-items bg-white relative group overflow-hidden p-6 my-3 md:m-4">
+                                <div>
+                                    <div class="new-arrivals-img">
+                                        <img src="../dist/img/product-img-1 (1).jpg" alt=""
+                                            class="mx-auto object-cover">
+                                    </div>
+                                    <div class="new-arrivals-content mt-8">
+                                        <div class="flex items-center">
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                            <i class="ri-star-s-fill text-amber-400 text-2xl"></i>
+                                        </div>
+                                        <h5 class="font-semibold text-xl py-4 hover:text-blue-600">
+                                            Geeky ipsum esse repreh est consequat
+                                        </h5>
+                                        <ul class="flex">
+                                            <li>
+                                                <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57</p>
+                                            </li>
+                                            <li>
+                                                <p class="text-xl font-bold text-red-500">$17.68</p>
+                                            </li>
+                                        </ul>
+                                        <div class="flex flex-col absolute top-16 -right-20 transition-all duration-600
+                                        group-hover:right-2">
+                                            <i
+                                                class="ri-drag-move-2-fill h-10 w-10 rounded-md mb-2 text-xl bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-heart-line  h-10 w-10 text-xl rounded-md mb-2 bg-gray-100 inline-block text-center leading-10"></i>
+                                            <i
+                                                class="ri-restart-line  h-10 w-10 text-xl rounded-md bg-gray-100 inline-block text-center leading-10"></i>
+                                        </div>
+                                        <div
+                                            class="absolute group-hover:bottom-5 -bottom-20 transition-all duration-600 w-full left-2/4 -translate-x-2/4 px-5">
+                                            <a href="javascript:void(0)"
+                                                class="text-md font-semibold bg-amber-400 w-full inline-block text-center py-2">
+                                                <i class="ri-shopping-bag-line text-md font-semibold"></i>
+                                                Add To Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ad-3 -->
+
+        <section class="ad-3 my-12">
+            <div class="xl:container mx-auto px-4">
+                <div class="ad-img-3 md:mx-4">
+                    <img src="../dist/img/ads-4.png" class="w-full" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- popular -->
+
+        <section class="popular">
+            <div class="xl:container mx-auto px-4">
+                <div class="popular-title-2 md:mx-4">
+                    <div class="flex justify-between items-center">
+                        <h2 class="font-semibold text-xl sm:text-3xl">Popular Sales</h2>
+                        <a href="javascript:void(0)" class="font-semibold flex">View More <i
+                                class="ri-arrow-right-line ms-1"></i></a>
+                    </div>
+                </div>
+                <div class="populer-inner mt-12">
+                    <div class="flex flex-wrap">
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-3.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-4.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-5.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-6.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-7.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-8.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-9.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 md:w-6/12 w-full">
+                            <div class="populer-items bg-white p-4 mx-4 my-1">
+                                <div class="flex items-center">
+                                    <div class="w-3/12">
+                                        <div class="populer-img me-3">
+                                            <img src="../dist/img/product-img-3.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="w-9/12">
+                                        <div class="populer-content">
+                                            <h5
+                                                class="font-semibold text-[15px]  line-clamp-1  hover:text-blue-600 mb-1">
+                                                Xoggle aute et pariatur adipisicing nostrud et
+                                            </h5>
+                                            <ul class="flex">
+                                                <li>
+                                                    <p class="me-3 line-through text-xl font-bold text-gray-400 ">$24.57
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="text-xl font-bold text-red-500">$17.68</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coupon -->
+        <section class="coupon py-20">
+            <div style="background: url(../dist/img/discount-banner-1.jpg) 0% 0% / cover no-repeat;"
+                class="discount-banner w-full py-20 bg-cover flex justify-center items-center">
+                <div class="text-center">
+                    <h2 class="font-semibold text-3xl">Get <span class="text-amber-400">20%</span> Off Discount Coupon
+                    </h2>
+                    <p class="mt-2 mb-4 text-md">by Subscribe our Newsletter</p>
+                    <div class="flex px-2">
+                        <input type="text" placeholder="EMAIL ADDRESS" class="p-3 border inline-block outline-none">
+                        <button class="border border-s-0 px-4 bg-amber-400">Get the
+                            Couupon</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+
+        <footer>
+            <div class="xl:container mx-auto px-4">
+                <div class="text-center pb-8 border-b md:mx-4">
+                    <a href="javascript:void(0)" class="inline-block"><img src="../dist/img/logo.svg" alt=""></a>
+                </div>
+                <div class="contact-inner py-12 border-y md:mx-4">
+                    <div class="flex flex-wrap">
+                        <div class="lg:w-3/12 md:w-6/12 w-full">
+                            <div class="contact-items px-4">
+                                <h4 class="text-lg font-semibold mb-6">About Us</h4>
+                                <p class="text-gray-500">We know there are a lot of threa developers our but
+                                    we pride
+                                    into a firm in the
+                                    industry.</p>
+                            </div>
+                        </div>
+                        <div class="lg:w-3/12 md:w-6/12 w-full">
+                            <div class="contact-items px-4">
+                                <h4 class="text-lg font-semibold mb-6 md:mt-0 mt-4">Feature</h4>
+                                <ul>
+                                    <li><a href="javascript:void(0)"
+                                            class="inline-block text-gray-500 py-1 hover:underline hover:text-black">About
+                                            Us</a></li>
+                                    <li><a href="javascript:void(0)"
+                                            class="inline-block text-gray-500 py-1 hover:underline hover:text-black">Terms
+                                            Condition</a></li>
+                                    <li><a href="javascript:void(0)"
+                                            class="inline-block text-gray-500 py-1 hover:underline hover:text-black">Best
+                                            Products</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lg:w-3/12 md:w-6/12 w-full">
+                            <div class="contact-items px-4 mt-4 lg:mt-0">
+                                <h4 class="text-lg font-semibold mb-6">General Links</h4>
+                                <ul>
+                                    <li><a href="javascript:void(0)"
+                                            class="inline-block text-gray-500 py-1 hover:underline hover:text-black">Blog</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)"
+                                            class="inline-block text-gray-500 py-1 hover:underline hover:text-black">Tracking
+                                            Order</a></li>
+                                    <li><a href="javascript:void(0)"
+                                            class="inline-block text-gray-500 py-1 hover:underline hover:text-black">Become
+                                            Seller</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="lg:w-3/12 md:w-6/12 w-full">
+                            <div class="contact-items px-4 mt-4 lg:mt-0">
+                                <h4 class="text-lg font-semibold mb-6">Helpful</h4>
+                                <ul>
+                                    <li><a href="javascript:void(0)"
+                                            class="inline-block text-gray-500 py-1 hover:underline hover:text-black">Flash
+                                            Sale</a></li>
+                                    <li><a href="javascript:void(0)"
+                                            class="inline-block text-gray-500 py-1 hover:underline hover:text-black">FAQ</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)"
+                                            class="inline-block text-gray-500 py-1 hover:underline hover:text-black">Support</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright py-4 md:px-4">
+                    <div class="flex flex-wrap">
+                        <div class="md:w-6/12 w-full">
+                            <div class="copyright-items text-center md:text-start">
+                                <p class="text-gray-500">©2022 <span class="text-black">QuomodosoftAll</span> rights
+                                    reserved
+                                </p>
+                            </div>
+                        </div>
+                        <div class="md:w-6/12 w-full">
+                            <div class="copyright-items mt-1 md:mt-0">
+                                <ul class="flex md:justify-end justify-center ">
+                                    <li><a href="javascript:void(0)" class="text-xl ms-5 hover:text-yellow-500"><i
+                                                class="ri-youtube-line"></i></a></li>
+                                    <li><a href="javascript:void(0)" class="text-xl ms-5 hover:text-yellow-500"><i
+                                                class="ri-instagram-line"></i></a></li>
+                                    <li><a href="javascript:void(0)" class="text-xl ms-5 hover:text-yellow-500"><i
+                                                class="ri-facebook-box-line"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- js -->
+    <script src="../dist/js/jquery-3.7.1.min.js"></script>
+    <script src="../dist/js/myscript.js"></script>
+
+</body>
+
+</html>

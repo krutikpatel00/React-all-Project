@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-center {
+  align-items: center;
+}
+.w-1 {
+  width: 100%;
+}
+.w-2 {
+  width: 50%;
+}
+.position-relative {
+  position: relative;
+}
+
+/* ******* TIMELINE ****** */
+
+.timeline-inner {
+  padding: 15px 0;
+}
+.timeline-items {
+  padding: 45px;
+}
+.timeline-inner .content {
+  transform: translateY(15px);
+  padding: 0 30px;
+  -webkit-transform: translateY(15px);
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -o-transform: translateY(15px);
+}
+.timeline-inner .description {
+  padding: 8px 0 0 0;
+  color: #909090;
+}
+.timeline-inner .timeline-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  color: #65c7d0;
+  transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -o-transform: translateY(15px);
+}
+.timeline-inner .timeline .timeline-year {
+  font-size: 35px;
+}
+.timeline-inner .timeline .timeline-icon > i {
+  font-size: 35px;
+}
+.timeline-inner .timeline .title {
+  color: #65c7d0;
+  font-size: 25px;
+}
+
+.timeline-inner .timeline-left::after {
+  content: "";
+  width: calc(50% - 15px);
+  height: calc(100%);
+  border-radius: 115px 0 0 115px;
+  border-block: 15px solid #73c2ca;
+  border-left: 15px solid #73c2ca;
+  top: 0;
+  left: 0;
+  position: absolute;
+  -webkit-border-radius: 115px 0 0 115px;
+}
+.timeline-left::before {
+  content: "";
+  width: calc(50% - 30px);
+  height: calc(100% - 30px);
+  border-block: 15px solid #93d6dd;
+  border-left: 15px solid #93d6dd;
+  border-radius: 100px 0 0 100px;
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  -webkit-border-radius: 100px 0 0 100px;
+}
+
+.timeline-right::after {
+  content: "";
+  width: calc(50% - 30px);
+  height: calc(100% - 30px);
+  border-block: 15px solid #ef5720;
+  border-right: 15px solid #ef5720;
+  top: 15px;
+  right: 15px;
+  position: absolute;
+  border-radius: 0 100px 100px 0;
+  -webkit-border-radius: 0 100px 100px 0;
+  -moz-border-radius: 0 100px 100px 0;
+  -ms-border-radius: 0 100px 100px 0;
+  -o-border-radius: 0 100px 100px 0;
+}
+
+.timeline-right::before {
+  content: "";
+  width: calc(50% - 15px);
+  height: calc(100% - 0px);
+  border-block: 15px solid #ea3c14;
+  border-right: 15px solid #ea3c14;
+  border-radius: 0 100px 100px 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  -webkit-border-radius: 0 115px 115px 0;
+}
+.timeline-inner .timeline-items:nth-child(2) .timeline-content,
+.timeline-inner .timeline-items:nth-child(2) .title {
+  color: #ea3c14;
+}
+
+.timeline-inner .timeline-items:nth-child(3) .timeline-left::after,
+.timeline-inner .timeline-items:nth-child(3) .timeline-content,
+.timeline-inner .timeline-items:nth-child(3) .title {
+  border-color: #8cc63e;
+  color: #8cc63e;
+}
+.timeline-inner .timeline-items:nth-child(3) .timeline-left::before {
+  border-color: #6caf29;
+}
+.timeline-inner .timeline-items:nth-child(4) .timeline-right::after,
+.timeline-inner .timeline-items:nth-child(4) .timeline-content,
+.timeline-inner .timeline-items:nth-child(4) .title {
+  border-color: #f99324;
+  color: #f99324;
+}
+.timeline-inner .timeline-items:nth-child(4) .timeline-right::before {
+  border-color: #fbb03b;
+}
+.timeline-inner .timeline-items:nth-child(5) .timeline-left::after,
+.timeline-inner .timeline-items:nth-child(5) .timeline-content,
+.timeline-inner .timeline-items:nth-child(5) .title {
+  border-color: #0071bd;
+  color: #0071bd;
+}
+.timeline-inner .timeline-items:nth-child(5) .timeline-left::before {
+  border-color: #0050a3;
+}
+
+.timeline-select {
+  height: 40px;
+  width: 40px;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  border: 10px solid #303334;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  display: none;
+  top: -5px;
+  z-index: 2;
+}
+

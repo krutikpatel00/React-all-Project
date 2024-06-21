@@ -1,0 +1,120 @@
+.login {
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(0, 0, 0) 100%);
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+.login-inner {
+  width: 800px;
+  background-color: #121212;
+  display: flex;
+  padding: 60px 100px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-inner h2 {
+  margin-bottom: 30px;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+.login-inner .login-continue {
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 40px 0;
+}
+.login-inner .login-continue button {
+  padding: 14px 0;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e8e8e8;
+  color: #e8e8e8;
+  font-weight: 600;
+  font-size: 15px;
+  width: 100%;
+  margin: 10px 0;
+  background-color: transparent;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+.login-inner .login-continue button img {
+  margin: 0 10px;
+}
+.border-login {
+  border-top: 2px solid rgb(42, 40, 40);
+  width: 100%;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.login-from {
+  padding: 80px 0 60px 0;
+}
+.login-from > a {
+  color: white;
+  text-align: center;
+  display: block;
+  padding: 20px 0 0 0;
+}
+.login-from label {
+  color: white;
+}
+.login-from input {
+  padding: 14px 150px 14px 10px;
+  margin: 10px 0;
+  color: white;
+  background-color: #121212;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  outline: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.login-from input::placeholder {
+  padding: 0 15px;
+  font-size: 16px;
+  color: rgb(206, 206, 206);
+}
+.login-from .checkboxbtn {
+  padding: 0;
+  height: 20px;
+  vertical-align: middle;
+  width: 20px;
+  margin-right: 10px;
+}
+.login-from .login-btn {
+  text-align: center;
+  border-radius: 80px;
+  padding: 13px 0;
+  outline: none;
+  border: none;
+  background-color: #1ed760;
+  color: #121212;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 30px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -ms-border-radius: 80px;
+  -o-border-radius: 80px;
+}
+
+.login-sign-btn p {
+  color: white;
+  padding: 40px 0 0 0;
+}
+.login-sign-btn p a {
+  color: #1ed760;
+}

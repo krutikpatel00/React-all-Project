@@ -1,0 +1,124 @@
+<table border="">
+      <tr>
+            <th>
+                  name :
+            </th>
+            <th>
+                  <input type="text" id="name">
+            </th>
+      </tr>
+      <tr>
+            <th>
+                  passward :
+            </th>
+            <th>
+                  <input type="text" id="pass">
+            </th>
+
+      </tr>
+      <tr>
+            <th><input type="file" id="file"></th>
+      </tr>
+      <tr>
+
+            <th>
+                  <button id="btn">
+                        click
+                  </button>
+                  <button id="update">
+                        up
+                  </button>
+            </th>
+      </tr>
+</table>
+
+<div class="display">
+
+</div>
+
+
+<script>
+      let name = document.querySelector("#name");
+      let pass = document.querySelector("#pass");
+      let fileInput = document.querySelector("#file");
+      let stu;
+
+      let dataGet = localStorage.getItem("studund");
+      stu = dataGet ? JSON.parse(dataGet) : [];
+
+      display();
+      edit();
+      onSubmit();
+      deleteEntry();
+
+      function edit() {
+            let editButtons = document.querySelectorAll(".edit");
+            for (let i = 0; i < stu.length; i++) {
+                  editButtons[i].addEventListener("click", () => {
+                        name.value = stu[i].name;
+                        pass.value = stu[i].password;
+
+                        document.querySelector("#update").addEventListener("click", function () {
+                              if (name.value !== "" || pass.value !== "") {
+                                    stu[i].name = name.value;
+                                    stu[i].password = pass.value;
+                                    name.value = "";
+                                    pass.value = "";
+                                    display();
+                                    setData();
+                              }
+                        });
+                  });
+            }
+      }
+
+      function onSubmit() {
+            let submitButton = document.querySelector("#btn");
+            submitButton.addEventListener("click", () => {
+                  if (name.value !== "" || pass.value !== "") {
+                        stu.push({ name: name.value, password: pass.value, img: URL.createObjectURL(fileInput.files[0]) });
+                        display();
+                        setData();
+                        name.value = "";
+                        pass.value = "";
+                        edit();
+                        deleteEntry();
+                  }
+            });
+      }
+
+      function setData() {
+            let str = JSON.stringify(stu);
+            localStorage.setItem("studund", str);
+      }
+
+      function display() {
+            let displayDiv = document.querySelector(".display");
+            let innerHtml = "<table border=''><th> name </th><th> password </th><th> Image </th>";
+
+            for (let i = 0; i < stu.length; i++) {
+                  innerHtml += `<tr>`;
+                  innerHtml += `<th> ${stu[i].name}</th>`;
+                  innerHtml += `<th> ${stu[i].password}</th>`;
+                  innerHtml += `<th><img src="${stu[i].img}" alt="user-image"></img></th>`;
+                  innerHtml += `<th><button class="delete">Click</button></th>`;
+                  innerHtml += `<th><button class="edit">Edit</button></th>`;
+                  innerHtml += `</tr>`;
+            }
+            displayDiv.innerHTML = innerHtml;
+      }
+
+      function deleteEntry() {
+            let deleteButtons = document.querySelectorAll(".delete");
+            for (let i = 0; i < stu.length; i++) {
+                  deleteButtons[i].addEventListener("click", function () {
+                        stu.splice(i, 1);
+                        display();
+                        edit();
+                        setData();
+                        deleteEntry();
+                  });
+            }
+      }
+  
+</script>

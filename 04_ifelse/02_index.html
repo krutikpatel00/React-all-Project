@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <div>
+
+            <div>
+                  <label>bank serive
+                        <ul>
+                              <li>enter (1)withdrawal</li>
+                              <li>enter (2)deposit</li>
+                              <li>enter (3)account balance check</li>
+                        </ul>
+                  </label>
+                  <input type="text" id="serive">
+                  <br>
+                  <br>
+                  <div>
+                        <label for="">withdrawal/deposit</label>
+                        <input type="text" id="withDepo">
+                  </div>
+                  <br>
+                  <button onclick="bank()">click</button>
+                  <p id="valid"></p>
+                  <h3 id="bankamout">none</h3>
+                  <h3 id="widDip">none</h3>
+
+            </div>
+      </div>
+
+      <script>
+            let account = 10000;
+            let deposit = 0;
+            let withdrawal = 0;
+            function bank() {
+                  let serive = parseInt(document.getElementById("serive").value);
+                  if (serive === 1) {
+                        withdrawal = parseInt(document.getElementById("withDepo").value);
+
+                        document.getElementById("widDip").innerHTML = withdrawal;
+                        let bankBalance = account - withdrawal;
+                        document.getElementById("bankamout").innerHTML = bankBalance;
+
+                  } else if (serive === 2) {
+                        deposit = parseInt(document.getElementById("withDepo").value);
+
+                        document.getElementById("widDip").innerHTML = deposit;
+                        let bankBalance = account + withdrawal;
+                        document.getElementById("bankamout").innerHTML = bankBalance;
+
+
+                  } else if (serive === 3) {
+                        let bankBalance = account + deposit - withdrawal;
+                        document.getElementById("bankamout").innerHTML = bankBalance;
+
+                  } else {
+                        document.getElementById("valid").innerHTML = "enter your valid number"
+                  }
+
+            }
+      </script>
+</body>
+
+</html>

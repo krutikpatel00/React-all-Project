@@ -1,0 +1,13 @@
+p {
+  font-size: 40px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: 40px;
+  color: aqua;
+}

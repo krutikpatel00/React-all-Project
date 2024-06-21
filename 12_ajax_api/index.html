@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <select id="list" value="list">
+            <option value="--select--"></option>
+      </select>
+      <button onclick="dogApi()">click</button>
+      <div class="img">
+
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+            breedDog()
+
+            let data_list = document.querySelector("#list");
+            function breedDog() {
+                  $.ajax({
+                        type: "get",
+                        url: "https://dog.ceo/api/breeds/list/all",
+
+                        success: function (data) {
+
+                              let option = "";
+
+                              let breeds = Object.keys(data.message);
+
+                              for (let i = 0; i < breeds.length; i++) {
+                                    option += `<option value="${breeds[i]}">${breeds[i]}</option>`
+                              }
+                              data_list.innerHTML = option;
+
+                        }
+                  });
+            }
+
+
+            function dogApi() {
+                  let dogvalue = data_list.value;
+                  $.ajax({
+                        type: "get",
+                        url: `https://dog.ceo/api/breed/${dogvalue}/images/random`,
+
+                        success: function (data) {
+
+                              let img = document.querySelector(".img");
+                              let show = `<img src="${data.message}" alt="dog">`
+                              img.innerHTML = show
+                        }
+                  });
+            }
+      </script>
+
+
+</body>
+
+</html>

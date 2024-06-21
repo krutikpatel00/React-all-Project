@@ -1,0 +1,137 @@
+<table border="">
+      <tr>
+            <th>
+                  name :
+            </th>
+            <th>
+                  <input type="text" id="name">
+            </th>
+      </tr>
+      <tr>
+            <th>
+                  passward :
+            </th>
+            <th>
+                  <input type="text" id="pass">
+            </th>
+
+      </tr>
+      <tr>
+            <th><input type="file" id="file" accept="Image"></th>
+      </tr>
+      <tr>
+
+            <th>
+                  <button id="btn">
+                        click
+                  </button>
+                  <button id="update">
+                        up
+                  </button>
+            </th>
+      </tr>
+</table>
+
+<div class="display">
+
+</div>
+<script>
+
+      let name = document.querySelector("#name");
+      let pass = document.querySelector("#pass");
+      let imgid = document.querySelector("#file");
+
+      console.log(imgid);
+      let stu;
+
+      let dataGet = localStorage.getItem("studund")
+      stu = dataGet ? JSON.parse(dataGet) : [];
+
+      dissplay()
+      eddit()
+      onDataSumit()
+      deliteId()
+
+      function eddit() {
+            let edit = document.querySelectorAll("#edi")
+            console.log(edit);
+            for (let i = 0; i < stu.length; i++) {
+                  edit[i].addEventListener("click", () => {
+                        name.value = stu[i].name;
+                        pass.value = stu[i].password;
+
+                        document.querySelector("#update").addEventListener("click", function () {
+                              if (name.value !== "" || pass.value !== "") {
+                                    stu[i].name = name.value
+                                    stu[i].password = pass.value
+                                    console.log("up");
+                                    name.value = "";
+                                    pass.value = "";
+                                    dissplay()
+                                    setData();
+                              }
+                        })
+
+                  })
+
+            }
+      }
+      function onDataSumit() {
+
+            console.log(imgid);
+            let dataSubmit = document.querySelector("#btn");
+            dataSubmit.addEventListener("click", () => {
+                  if (name.value !== "" || pass.value !== "") {
+                        stu.push({ name: name.value, password: pass.value, img: URL.createObjectURL(imgid.files[0]) })
+                        dissplay();
+                        setData();
+                        name.value = "";
+                        pass.value = "";
+                  }
+                  eddit()
+                  deliteId()
+            })
+      }
+      function setData() {
+            let str = JSON.stringify(stu)
+            let add = localStorage.setItem("studund", str)
+      }
+      function dissplay() {
+            let dissPlay = document.querySelector(".display")
+
+
+            let innHtml = "<table border=''><th> name </th><th> passward </th>";
+
+            for (let i = 0; i < stu.length; i++) {
+                  innHtml += `<tr>`
+
+                  innHtml += `<th> ${stu[i].name}</th>`
+
+
+                  innHtml += `<th> ${stu[i].password}</th>`
+                  innHtml += `<th><img src="${stu[i].imges}"></img></th>`
+
+                  innHtml += `<th><button id="delite">click</button></th>`
+                  innHtml += `<th><button id="edi">edit</button></th>`
+
+                  innHtml += `</tr>`
+
+            }
+            dissPlay.innerHTML = innHtml;
+
+      }
+      function deliteId() {
+            let delite = document.querySelectorAll("#delite")
+            console.log(delite);
+            for (let i = 0; i < stu.length; i++) {
+                  delite[i].addEventListener("click", function s() {
+                        stu.splice(i, 1);
+                        dissplay();
+                        eddit()
+                        setData();
+                        deliteId();
+                  })
+            }
+      }
+
+</script>

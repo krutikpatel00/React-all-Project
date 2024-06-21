@@ -1,0 +1,18 @@
+/* lg */
+@media (min-width: 992px) {
+  .carousel-img {
+    margin-left: 200px !important;
+  }
+  header {
+    background-color: transparent;
+  }
+  header nav {
+    background-color: transparent;
+  }
+  header nav {
+    padding: 15px 0 !important;
+  }
+  .wca {
+    transform: translateY(-80px);
+  }
+}

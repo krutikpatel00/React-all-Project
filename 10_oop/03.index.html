@@ -1,0 +1,27 @@
+<script>
+      // Class Inheritance 
+
+      class A {
+            constructor(n, a) {
+                  this.name = n;
+                  this.age = a;
+
+            }
+      }
+      class B extends A {
+            constructor(name, age, email, phone) {
+                  super(name, age);
+                  this.email_id = email;
+                  this.phone_number = phone;
+            }
+            get() {
+                  console.log(this.name);
+                  console.log(this.age);
+                  console.log(this.email_id);
+                  console.log(this.phone_number);
+            }
+      }
+      let x = new B("krutik", 22, "abc@gmail.com","9185885885");
+      
+      x.get();
+</script>

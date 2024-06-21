@@ -1,0 +1,38 @@
+<script>
+      let check = parseInt(prompt());
+
+      class Product {
+            company_detail(check) {
+                  this.company_name = "BoAt";
+                  this.company_product = "airdopes";
+                  this.product_price = 500;
+                  this.product_qut = 10;
+                  this.by = check;
+                  this.buy()
+            }
+            buy() {
+                  this.by_price = this.product_price * this.by;
+                  this.product_check()
+
+            }
+            product_check() {
+                  if (this.by <= this.product_qut) {
+                        this.Stock = "IN STOCK"
+                  } else {
+                        this.Stock = "OUT OF STOCK"
+                  }
+                  this.get()
+            }
+            get() {
+                  console.log("name of comany :" + this.company_name);
+                  console.log("name of product :" + this.company_product);
+                  console.log("product price :" + this.product_price);
+                  console.log("product qut :" + this.product_qut);
+                  console.log("total buy in price :" + this.by_price);
+                  console.log("check stock :" + this.Stock);
+
+            }
+      }
+      let pro = new Product;
+      pro.company_detail(check);
+</script>

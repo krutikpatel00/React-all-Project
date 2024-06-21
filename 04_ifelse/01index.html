@@ -1,0 +1,33 @@
+<!-- if -->
+<!-- if-else -->
+<!-- if else nesting -->
+<!-- else if -->
+<!-- swiche -->
+
+<script>
+
+      let guj = parseInt(prompt("enter your mark"))
+      let sce = parseInt(prompt("enter your mark"))
+      let math = parseInt(prompt("enter your mark"))
+      function mark(a, b, c) {
+            let total = a + b + c;
+            console.log("total = " + total);
+
+            let aver = total / (300 / 100);
+            console.log(`aver ${aver}%`);
+
+            if (aver > 33) {
+                  if (aver > 60) {
+                        console.log("grade : A");
+                  } else {
+                        console.log("grade : B");
+                  }
+            } else {
+                  console.log("grade : C");
+            }
+      }
+      mark(guj, sce, math)
+
+
+
+</script>

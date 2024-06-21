@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        "use strict"
+        class Studunt {
+            constructor(name, no) {
+                this.stu_name = name;
+                this.stu_no = no;
+            }
+            stu() {
+                console.log("name :" + this.stu_name);
+                console.log("Gir no :" + this.stu_no);
+            }
+        }
+        class School extends Studunt {
+            constructor(name, no, sName, sYear) {
+                super(name, no);
+                this.s_name = sName;
+                this.s_year = sYear;
+            }
+            school() {
+                this.stu();
+                console.log("school name : " + this.s_name);
+                console.log("school year : " + this.s_year);
+            }
+        }
+        class University extends School {
+            constructor(name, no, sName, sYear, uName, uYear) {
+                super(name, no, sName, sYear)
+                this.u_name = uName;
+                this.u_year = uYear;
+            }
+            university() {
+                this.school();
+                console.log("university name : " + this.u_name);
+                console.log("university year : " + this.u_year);
+            }
+        }
+
+        let uni = new University("krutik", 2425, "sigma school of sic", 2018, "sauvarast universtity", 2020);
+        uni.university();
+
+    </script>
+        
+</body>
+
+</html>

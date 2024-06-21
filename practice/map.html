@@ -1,0 +1,26 @@
+<script>
+
+
+
+      let array = [4, 5, 8, 6, 8, 4, 5]
+
+      let abc = array.map((item) => {
+            return item * 2;
+      });
+
+      // let cdg = array.filter((item) => {
+      //       return item == 4;
+      // })
+
+      let cdg = abc.filter((item) => {
+            return item == 10;
+      })
+
+      console.log(cdg);
+
+
+      let add = array.reduce((previous, current) => {
+            return previous + current;
+      }, 0)
+      console.log(add);
+</script>

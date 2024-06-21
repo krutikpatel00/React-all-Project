@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+
+      <table border="">
+            <tr>
+                  <th>a : </th>
+                  <th><input type="text" placeholder=" value a" id="a"></th>
+            </tr>
+            <tr>
+                  <th>b : </th>
+                  <th><input type="text" placeholder=" value b" id="b"></th>
+            </tr>
+            <tr>
+                  <th>
+                        <button onclick="getrel()">click</button>
+                  </th>
+                  <th>
+                        <p id="print"></p>
+                  </th>
+            </tr>
+
+      </table>
+      <script>
+            function getrel() {
+                  let a = parseInt(document.getElementById("a").value);
+                  let b = parseInt(document.getElementById("b").value);
+                  let ans = a + b;
+                  document.getElementById("print").innerHTML = ans
+            }
+      </script>
+</body>
+
+</html>

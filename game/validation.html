@@ -1,0 +1,82 @@
+<form onsubmit="return valudetion()">
+      <table border="">
+            <tr>
+                  <td>name</td>
+                  <td><input type="text" id="name"></td>
+                  <td>
+                        <p id="nameReq">*</p>
+                  </td>
+            </tr>
+            <tr>
+                  <td>password</td>
+                  <td><input type="text" id="password"></td>
+                  <td>
+                        <p id="passReq">*</p>
+                  </td>
+            </tr>
+            <tr>
+                  <td>email</td>
+                  <td><input type="text" id="email"></td>
+                  <td>
+                        <p id="emailReq">*</p>
+                  </td>
+            </tr>
+            <tr>
+                  <td>email</td>
+                  <td><input type="checkbox" name="checkboxs" id="check"></td>
+                  <td>
+                        <p id="checkReq">*</p>
+                  </td>
+            </tr>
+            <tr>
+                  <td><input type="submit" id="btn" value="button"></td>
+            </tr>
+      </table>
+</form>
+
+
+<script>
+      function valudetion() {
+            let name = document.querySelector("#name");
+            let password = document.querySelector("#password");
+            let email = document.querySelector("#email");
+            let check = document.getElementById("check");
+
+            let decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+            let validRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+            if (name.value === "") {
+                  document.getElementById("nameReq").innerHTML = "name is required";
+                  return false;
+
+            } else if (name.value.length < 2) {
+                  document.getElementById("nameReq").innerHTML = "name is 2+ word";
+                  return false;
+            }
+            else if (password.value === "") {
+                  document.getElementById("passReq").innerHTML = "password is required";
+                  return false;
+            }
+            else if (!password.value.match(decimal)) {
+                  document.getElementById("passReq").innerHTML = "8 to 15 characters which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character";
+                  return false;
+            }
+            else if (email.value === "") {
+                  document.getElementById("emailReq").innerHTML = "email is required";
+                  return false;
+
+            } else if (!email.value.match(validRegex)) {
+                  document.getElementById("emailReq").innerHTML = "it's not email";
+                  return false;
+
+            } else if () {
+                  document.getElementById("checkReq").innerHTML = "check box";
+                  return false;
+
+            }
+            else {
+                  return true;
+            }
+      }
+
+</script>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            table {
+                  border-collapse: collapse;
+            }
+
+            th,
+            td {
+                  padding: 5px 15px;
+            }
+      </style>
+</head>
+
+<body>
+      <table border="1">
+            <tr>
+                  <th>
+                        bill
+                  </th>
+                  <th>
+                        acout
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        use unit:
+                  </th>
+                  <th>
+                        <input type="text" id="unite">
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        texs (5%)
+                  </th>
+                  <th>
+                        <p id="tex"></p>
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        gst (18%)
+                  </th>
+                  <th>
+                        <p id="gst"></p>
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        total Amount₹
+                  </th>
+                  <th>
+                        <p id="totalAmount"></p>
+                  </th>
+            </tr>
+            <tr>
+                  <th colspan="2">
+                        <button onclick="bill()">click</button>
+                  </th>
+            </tr>
+      </table>
+
+
+      <script>
+
+            function bill() {
+                  let unite = parseInt(document.getElementById("unite").value);
+                  let unitRate = 8;
+
+                  let amu = unite * unitRate;
+
+                  let texs = amu * (5 / 100);
+                  document.getElementById("tex").innerHTML = texs;
+
+                  let gst = amu * (18 / 100);
+                  document.getElementById("gst").innerHTML = gst;
+
+                  let totalAmount = amu + texs + gst;
+                  document.getElementById("totalAmount").innerHTML = totalAmount;
+
+
+            }
+
+
+      </script>
+</body>
+
+</html>

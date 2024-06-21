@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <div>
+            <div>bank serive
+                  <ul>
+                        <li>enter (1)Rectangle</li>
+                        <li>enter (2)Triangle</li>
+                        <li>enter (3)Circle</li>
+                  </ul>
+                  select :
+                  <input type="text" id="select">
+            </div>
+            <br>
+            <br>
+            <div>
+                  height : Triangle
+                  <input type="text" id="height">
+            </div>
+            <div>
+                  base :Triangle
+                  <input type="text" id="base">
+            </div>
+            <div>
+                  radius : Circle
+                  <input type="text" id="radius">
+            </div>
+            <div>
+                  length : Rectangle
+                  <input type="text" id="length">
+            </div>
+            <div>
+                  width : Rectangle
+                  <input type="text" id="width">
+            </div>
+            <br>
+            <br>
+            <div id="ans">ans : 0</div>
+            <br>
+            <button onclick="ara()">click</button>
+      </div>
+      <script>
+            function ara() {
+                  let selsec = parseInt(document.getElementById("select").value);
+
+                  let height = document.getElementById("height").value;
+                  let base = document.getElementById("base").value;
+                  let radius = document.getElementById("radius").value;
+                  let width = document.getElementById("width").value;
+                  let length = document.getElementById("length").value;
+
+                  if (selsec === 1) {
+                        let ans = length * width;
+                        console.log(ans);
+                        document.getElementById("ans").innerHTML = `ans : ${ans}`;
+                  } else if (selsec === 2) {
+                        let ans = 1 / 2 * base * height;
+                        document.getElementById("ans").innerHTML = `ans : ${ans}`;
+                  } else if (selsec === 3) {
+                        const pi = Math.PI;
+                       
+                        let ans = pi* radius * radius;
+                        document.getElementById("ans").innerHTML = `ans : ${ans}`;
+                  }
+                  else {
+                        document.getElementById("ans").innerHTML = `ans : pless select not valide try... agine`;
+                  }
+            }
+      </script>
+</body>
+
+</html>

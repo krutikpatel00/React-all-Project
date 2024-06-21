@@ -1,0 +1,5 @@
+.bg-electronics-img {
+  background-image: url("../../../public/Images/electronics-img.png");
+  background-size: cover;
+  background-position: center;
+}

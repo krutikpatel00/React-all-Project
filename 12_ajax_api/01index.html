@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .img {
+                  object-fit: cover;
+                  grid-column: 6;
+            
+            }
+      </style>
+</head>
+
+<body>
+      <select id="list" value="list">
+            <option value="--select--"></option>
+      </select>
+      <button onclick="dogApi()">click</button>
+      <div class="img">
+
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+            breedDog()
+
+            let data_list = document.querySelector("#list");
+            function breedDog() {
+                  $.ajax({
+                        type: "get",
+                        url: "https://dog.ceo/api/breed/hound/list",
+
+                        success: function (data) {
+
+                              let option = "";
+
+                              let breeds = (data.message);
+                              console.log(data.message);
+                              for (let i = 0; i < breeds.length; i++) {
+                                    option += `<option value="${breeds[i]}">${breeds[i]}</option>`
+                              }
+                              data_list.innerHTML = option;
+
+                        }
+                  });
+            }
+
+
+            function dogApi() {
+                  let dogvalue = data_list.value;
+                  $.ajax({
+                        type: "get",
+                        url: `https://dog.ceo/api/breed/hound/${dogvalue}/images`,
+
+                        success: function (data) {
+                              console.log(data);
+                              let img = document.querySelector(".img");
+                              let datashow = "";
+                              for (let i = 0; i < data.message.length; i++) {
+                                    datashow += `<img src="${data.message[i]}" alt="" height="300px" width="300px">`
+                              }
+                              img.innerHTML = datashow;
+                        }
+                  });
+            }
+      </script>
+
+
+</body>
+
+</html>

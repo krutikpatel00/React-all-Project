@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            table {
+                  border-collapse: collapse;
+            }
+
+            th,
+            td {
+                  padding: 5px 15px;
+            }
+      </style>
+</head>
+
+<body>
+      <table border="">
+            <tr>
+                  <th>Amount :</th>
+                  <th>
+                        <input type="text" id="amount">
+                  </th>
+            </tr>
+            <tr>
+                  <th>Annual rate Optional (%)</th>
+                  <th>
+                        <input type="text" id="rate">
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        time period
+                  </th>
+                  <th>
+                        <input type="text" id="time">
+                  </th>
+            </tr>
+            <tr>
+                  <th colspan="2">
+                        <button onclick="intrast()">click</button>
+                  </th>
+            </tr>
+
+      </table>
+
+      <table border="">
+            <tr>
+                  <th>
+                        Amount :
+                  </th>
+                  <th>
+                        <p id="amo">0</p>
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        total intrast :
+                  </th>
+                  <th>
+                        <p id="intrast">0</p>
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        total amount :
+                  </th>
+                  <th>
+                        <p id="totalAmo">0</p>
+                  </th>
+            </tr>
+      </table>
+
+
+      <script>
+            function intrast() {
+                  let amount = parseInt(document.getElementById("amount").value)
+                  let rate = parseInt(document.getElementById("rate").value)
+                  let time = parseInt(document.getElementById("time").value)
+
+                  document.getElementById("amo").innerHTML = amount;
+
+                  let intrast = amount * rate * time / 100
+                  document.getElementById("intrast").innerHTML = intrast;
+
+                  let totalAmo = amount + intrast;
+                  document.getElementById("totalAmo").innerHTML = totalAmo;
+            }
+
+      </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            #validation {
+                  padding: 40px;
+                  width: 500px;
+                  background-color: cornflowerblue;
+            }
+
+            .form-items {
+                  display: flex;
+                  flex-direction: column;
+                  padding: 10px 0;
+            }
+
+            input,
+            #nationalities {
+                  outline: none;
+                  border: none;
+                  padding: 10px 15px;
+                  border-radius: 8px;
+                  margin: 5px 0;
+                  font-size: 20px;
+            }
+
+            .error {
+                  color: red !important;
+
+            }
+
+            #submit {
+                  background-color: rgba(6, 255, 6, 0.521);
+                  padding: 10px 40px;
+                  text-align: center;
+                  font-size: 18px;
+                  color: white;
+            }
+      </style>
+</head>
+
+<body>
+      <div style="display: flex;justify-content: center;align-items: center; height: 100vh;">
+            <form id="validation">
+                  <div class="form-items">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username">
+                  </div>
+                  <div class="form-items">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                  </div>
+                  <div class="form-items">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                  </div>
+                  <div class="form-items">
+                        <label for="birthday">Date of birth:</label>
+                        <input type="date" id="birthday" name="birthday">
+                  </div>
+                  <div class="form-items">
+                   <label for="gender">Gender:</label>
+
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="male">
+
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="female">
+
+                        <label for="other">Other</label>
+                        <input type="radio" name="gender" id="other">
+                  </div>
+                  <div class="form-items">
+                        <label for="nationalities">Choose a nationality:</label>
+                        <select name="nationalities" id="nationalities" title="Please select something!">
+                              <option value="">select ...</option>
+                              <option value="worker">Worker</option>
+                              <option value="morning person">Morning person</option>
+                              <option value="night person">Night person</option>
+                        </select>
+                  </div>
+                  <input type="submit" value="Submit" id="submit">
+            </form>
+
+      </div>
+
+
+      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+      <script>
+            $("#validation").validate({
+                  rules: {
+                        username: {
+                              required: true,
+                              minlength: 2,
+
+                        },
+                        email: {
+                              required: true,
+                        },
+                        password: {
+                              required: true,
+                              digits: true,
+
+                        },
+                        birthday: {
+                              required: true,
+                        },
+                        gender: {
+                              required: true,
+                        },
+                        nationalities: {
+                              required: true,
+                        },
+                  },
+                  messages: {
+                        username: {
+                              required: "Name is required",
+                              minlength: "Name min 2 letter",
+                        },
+                        email: "Email is required",
+
+                  }
+            });
+      </script>
+</body>
+
+</html>

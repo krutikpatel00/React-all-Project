@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .dark {
+                  background-color: black;
+                  height: 400px;
+                  width: 400px;
+                  color: white;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="dark">hi....</div>
+
+      <script>
+            let muose = document.querySelector(".dark");
+            let colorTheme = "black";
+            muose.addEventListener("mouseover", function () {
+                  if (colorTheme === "black") {
+                        document.querySelector("body").style.backgroundColor = "black";
+                        colorTheme = "red";
+                        muose.style.backgroundColor = "red"
+                  } else {
+                        document.querySelector("body").style.backgroundColor = "red";
+                        muose.style.backgroundColor = "black"
+                        colorTheme = "black";
+                  }
+            })
+      </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<script>
+
+      let name = prompt("enter name ");
+      let gr_id = parseInt(prompt("enter gr "));
+      let guj = parseInt(prompt("enter guj "));
+      let math = parseInt(prompt("enter math "));
+      let sic = parseInt(prompt("enter sic "));
+
+      class student {
+            stu_information(nam, gr) {
+                  this.name = nam;
+                  this.grid = gr;
+
+            }
+            stu_mark(g, m, s) {
+                  this.guj = g;
+                  this.math = m;
+                  this.sic = s;
+                  this.totle = this.guj + this.math + this.sic;
+                  this.average = Math.floor(this.totle / 3);
+                  this.stu_grade();
+            }
+            stu_grade() {
+                  if (this.average >= 33 && this.average < 50) {
+                        this.grade = "C"
+                  } else if (this.average >= 50 && this.average < 75) {
+                        this.grade = "B"
+                  } else if (this.average >= 75 && this.average < 100) {
+                        this.grade = "A"
+                  } else {
+                        this.grade = "Fail"
+                  }
+                  this.get();
+            }
+            get() {
+                  console.log(`your name : ${this.name}`);
+                  console.log(`your gr id : ${this.grid}`);
+                  console.log(`your guj : ${this.guj}`);
+                  console.log(`your math : ${this.math}`);
+                  console.log(`your sic : ${this.sic}`);
+                  console.log(`your totle : ${this.totle}`);
+                  console.log(`your average : ${this.average}%`);
+                  console.log(`your grade : ${this.grade}`);
+            }
+
+      }
+      let stu = new student;
+      stu.stu_information(name, gr_id);
+      stu.stu_mark(guj, math, sic);
+</script>

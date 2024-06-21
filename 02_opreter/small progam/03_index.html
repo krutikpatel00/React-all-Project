@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            table {
+                  border-collapse: collapse;
+            }
+
+            th,
+            td {
+                  padding: 10px 15px;
+            }
+      </style>
+</head>
+
+<body>
+      <table border="">
+            <tr>
+                  <th>meter</th>
+                  <th><input type="text" value="1" id="meter"></th>
+            </tr>
+            <tr>
+                  <th>kilometer</th>
+                  <th>
+                        <p id="killMeter">0.001</p>
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        <button onclick="meter()">click</button>
+                  </th>
+            </tr>
+
+      </table>
+      <script>
+            function meter() {
+                  let meter = parseInt(document.getElementById("meter").value)
+                  let killMeter = meter * (1 / 1000);
+                  console.log(killMeter);
+
+                  document.getElementById("killMeter").innerHTML = killMeter
+            }
+
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<script>
+
+      // this key word to use call()  aplye() bind() method
+
+      let a = {
+            fName: "krutik",
+            lName: "patel",
+            abc: function () {
+                  return ` ${this.fName} ${this.lName} `
+            }
+      }
+      console.log(`a : ${a.abc()}`);
+
+      let b = {
+            fName: "ck",
+            lName: "patel",
+      }
+      console.log(a.abc.call(b));
+
+</script>
+
+<script>
+
+
+
+
+
+</script>

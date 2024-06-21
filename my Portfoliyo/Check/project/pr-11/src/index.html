@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../dist/css/owl.theme.default.css">
+    <link rel="stylesheet" href="../dist/fonts/fonts/remixicon.css">
+    <link rel="stylesheet" href="../dist/css/output.css">
+    <style>
+        .header-active {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0px 0px 30px -6px black;
+            animation: header-active 1s linear;
+        }
+
+        .header-active .header-logo img:last-child {
+            display: block;
+        }
+
+        .header-active .header-logo img:first-child {
+            display: none;
+        }
+
+        @keyframes header-active {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .owl-carousel .owl-item img {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="relative lg:absolute z-[99] lg:top-0 lg:left-0 lg:right-0 py-4">
+        <div class="container mx-auto px-4 ">
+            <div class="flex items-center justify-between">
+                <div class="header-logo">
+                    <img src="../dist/img/logo-light.png" alt="logo-light" title="logo-light" class="hidden lg:block">
+                    <img src="../dist/img/logo-dark.png" alt="logo-dark" title="logo-dark" class="lg:hidden">
+                </div>
+                <a href="javascipt:void(0)"
+                    class="lg:hidden toggle-manu inline-block text-2xl active:text-emerald-500 text-black"><i
+                        class="ri-menu-line"></i></a>
+                <nav
+                    class="lg:static absolute top-full left-0 right-0 px-12 border-t lg:border-0 z-20 bg-white lg:bg-transparent hidden lg:block">
+                    <ul class="flex flex-col lg:flex-row lg:items-center">
+                        <li><a href="#home"
+                                class="inline-block text-gray-400 hover:text-emerald-500 my-2 lg:ms-8 text-[17px]">Home</a>
+                        </li>
+                        <li><a href="#about"
+                                class="inline-block text-gray-400 hover:text-emerald-500 my-2 lg:ms-8 text-[17px]">About</a>
+                        </li>
+                        <li><a href="#project"
+                                class="inline-block text-gray-400 hover:text-emerald-500 my-2 lg:ms-8 text-[17px]">Projects</a>
+                        </li>
+                        <li><a href="#testimonial"
+                                class="inline-block text-gray-400 hover:text-emerald-500 my-2 lg:ms-8 text-[17px]">Testimonial</a>
+                        </li>
+                        <li><a href="#team"
+                                class="inline-block text-gray-400 hover:text-emerald-500 my-2 lg:ms-8 text-[17px]">Team</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- banner -->
+        <section
+            class="banner relative before:bg-[url(../img/hero-3-bg.png)] before:bg-cover z-10 before:bg-no-repeat before:w-full before:h-full bg-[#162938] before:absolute  before:top-0  before:left-0 before:-z-10 py-20"
+            id="home">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center">
+                    <div class="lg:w-6/12 w-full">
+                        <div
+                            class="banner-img border-[10px] border-[#ffffff0d] rounded-[48%_52%_66%_34%/62%_60%_40%_38%] ">
+                            <img src="../dist/img/hero-3-img.jpg" alt=""
+                                class="w-full rounded-[48%_52%_66%_34%/62%_60%_40%_38%]">
+                        </div>
+                    </div>
+                    <div class="lg:w-6/12 w-full">
+                        <div class="banner-img lg:ms-20 mt-12 lg:mt-0">
+                            <h5 class="text-white text-sm rounded-md py-2 px-4 bg-[#31424F] inline-block"><i
+                                    class="ri-rocket-line"></i> Small Business
+                                Solutions</h5>
+                            <h1 class="text-white text-4xl sm:text-6xl py-8">A Fully Intergrated <span
+                                    class="text-emerald-500 leading-[1.3]">Digital Agency</span></h1>
+                            <p class="text-white ">
+                                Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore cum soluta
+                                nobis est eligendi optio cumque nihil impedit quo minus maxime.
+                            </p>
+                            <a href="javascript:void(0)"
+                                class="py-3 px-6 rounded-md bg-emerald-500 inline-block mt-6 text-xl text-white">Get
+                                Started <i class="ri-arrow-right-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about -->
+        <section class="about py-20" id="about">
+            <div class="container mx-auto px-4">
+                <div class="about-title text-center mx-auto max-w-[550px]">
+                    <h6 class="text-gray-500 font-semibold">WHAT WE DO</h6>
+                    <h2 class="font-bold text-3xl text-gray-700 leading-[1.3] mt-4">The things motivates me is commen
+                        form of motivation.</h2>
+                </div>
+                <div class="about-inner mt-12">
+                    <div class="flex flex-wrap">
+                        <div class="lg:w-4/12 w-full md:w-6/12">
+                            <div class="about-items mx-4 md:p-4 my-4 lg:my-0">
+                                <div
+                                    class=" w-24 h-24 bg-gradient-to-tr to-[#00000000] from-[rgba(28,225,172,0.18)] rounded-[30%_70%_70%_30%/50%_50%_50%_50%]">
+                                    <img src="../dist/img/1.png" alt="" class="">
+                                </div>
+                                <h4 class="font-semibold text-2xl mt-6 text-gray-700">Strategy & Research</h4>
+                                <p class="text-gray-500 py-3">Et harum quidem as rerum facilis us est et distinctio nam
+                                    libero temp soluta nobis
+                                    esteligendi optio</p>
+                                <a href="javascript:void(0)" class="text-pink-600">More About <i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 w-full md:w-6/12">
+                            <div class="about-items mx-4 md:p-4 my-4 lg:my-0">
+                                <div
+                                    class="w-24 h-24 bg-gradient-to-tr to-[#00000000] from-[rgba(28,225,172,0.18)] rounded-[30%_70%_70%_30%/50%_50%_50%_50%]">
+                                    <img src="../dist/img/2.png" alt="" class="">
+                                </div>
+                                <h4 class="font-semibold text-2xl mt-6 text-gray-700">Design & Development
+                                </h4>
+                                <p class="text-gray-500 py-3">Et harum quidem as rerum facilis us est et distinctio nam
+                                    libero temp soluta nobis
+                                    esteligendi optio</p>
+                                <a href="javascript:void(0)" class="text-pink-600">More About <i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
+                        <div class="lg:w-4/12 w-full md:w-6/12">
+                            <div class="about-items mx-4 md:p-4 my-4 lg:my-0">
+                                <div
+                                    class="w-24 h-24 bg-gradient-to-tr to-[#00000000] from-[rgba(28,225,172,0.18)] rounded-[30%_70%_70%_30%/50%_50%_50%_50%]">
+                                    <img src="../dist/img/3.png" alt="" class="">
+                                </div>
+                                <h4 class="font-semibold text-2xl mt-6 text-gray-700">Management & Marketing
+                                </h4>
+                                <p class="text-gray-500 py-3">Et harum quidem as rerum facilis us est et distinctio nam
+                                    libero temp soluta nobis
+                                    esteligendi optio</p>
+                                <a href="javascript:void(0)" class="text-pink-600">More About <i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- project -->
+        <section class="project py-12" id="project">
+            <div class="container mx-auto px-4">
+                <div class="project-title text-center mx-auto max-w-[600px]">
+                    <h6 class="text-gray-500 font-semibold">OUR PROJECTS</h6>
+                    <h2 class="font-bold text-3xl text-gray-700 leading-[1.3] mt-4">A great design brings thousands of
+                        great
+                        results.</h2>
+
+                    <div class="flex flex-wrap justify-center mt-6 items-center">
+                        <a href="javascript:void(0)"
+                            class="bg-green-400 mx-2 inline-block py-1 px-6 shadow-lg shadow-green-200 text-white">All</a>
+                        <a href="javascript:void(0)" class="bg-[#F8F9FA] mx-2 inline-block my-1 py-1 px-6 text-black">Design</a>
+                        <a href="javascript:void(0)" class="bg-[#F8F9FA] mx-2 inline-block my-1 py-1 px-6 text-black">Creative</a>
+                        <a href="javascript:void(0)" class="bg-[#F8F9FA] mx-2 inline-block my-1 py-1 px-6 text-black">Digital</a>
+                        <a href="javascript:void(0)" class="bg-[#F8F9FA] mx-2 inline-block my-1 py-1 px-6 text-black">Photography</a>
+                    </div>
+                </div>
+                <div class="project-inner mt-12">
+                    <div class="flex flex-wrap">
+                        <div class="xl:w-4/12 md:w-6/12 w-full">
+                            <div class="project-items shadow-xl my-4 md:m-4 xl:mx-4">
+                                <img src="../dist/img/1.jpg" alt="1" title="1" class="rounded-lg">
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h4 class="text-xl font-semibold">The Language of Designs</h4>
+                                    <p class="text-gray-500">Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-4/12 md:w-6/12 w-full">
+                            <div class="project-items shadow-xl my-4 md:m-4 xl:mx-4">
+                                <img src="../dist/img/2.jpg" alt="2" title="2" class="rounded-lg">
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h4 class="text-xl font-semibold">The Language of Designs</h4>
+                                    <p class="text-gray-500">Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-4/12 md:w-6/12 w-full">
+                            <div class="project-items shadow-xl my-4 md:m-4 xl:mx-4">
+                                <img src="../dist/img/3.jpg" alt="3" title="3" class="rounded-lg">
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h4 class="text-xl font-semibold">The Language of Designs</h4>
+                                    <p class="text-gray-500">Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-4/12 md:w-6/12 w-full">
+                            <div class="project-items shadow-xl my-4 md:m-4 xl:mx-4">
+                                <img src="../dist/img/4.jpg" alt="4" title="4" class="rounded-lg">
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h4 class="text-xl font-semibold">The Language of Designs</h4>
+                                    <p class="text-gray-500">Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-4/12 md:w-6/12 w-full">
+                            <div class="project-items shadow-xl my-4 md:m-4 xl:mx-4">
+                                <img src="../dist/img/5.jpg" alt="5" title="5" class="rounded-lg">
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h4 class="text-xl font-semibold">The Language of Designs</h4>
+                                    <p class="text-gray-500">Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-4/12 md:w-6/12 w-full">
+                            <div class="project-items shadow-xl my-4 md:m-4 xl:mx-4">
+                                <img src="../dist/img/6.jpg" alt="6" title="6" class="rounded-lg">
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h4 class="text-xl font-semibold">The Language of Designs</h4>
+                                    <p class="text-gray-500">Design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIAL -->
+        <section class="testimonial bg-[#FFF0C4] py-20" id="testimonial">
+            <div class="container px-4 mx-auto">
+                <div class="testimonial-title text-center mx-auto max-w-[550px]">
+                    <h6 class="text-gray-500 font-semibold">TESTIMONIAL</h6>
+                    <h2 class="font-bold text-3xl text-gray-700 leading-[1.3] mt-4">Client Feedback</h2>
+                    <p class="text-gray-500 mt-2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                        consequuntur magni dolores.</p>
+                </div>
+                <div class="owl-carousel owl-theme owl-carousel-1 mt-12">
+                    <div class="testimonial-items bg-white p-6 relative shadow-[0px_0px_11px_-5px]">
+                        <img src="../dist/img/user-1.jpg" class="rounded-full w-20" alt="">
+
+                        <p class="text-xl font-semibold my-4 text-gray-600">" Excellent support for a tricky issue
+                            related to our customization of the template."</p>
+                        <h4 class="font-semibold text-lg mb-1 text-gray-600"> Brightlight books</h4>
+                        <span class="text-gray-600">Ubold Customer</span>
+                        <img src="../dist/img/quote.png" class="absolute bottom-0 right-0" alt="quote" title="quote">
+                    </div>
+                    <div class="testimonial-items bg-white p-6 relative shadow-[0px_0px_11px_-5px]">
+                        <img src="../dist/img/user-2.jpg" class="rounded-full w-20" alt="">
+
+                        <p class="text-xl font-semibold my-4 text-gray-600">" Excellent support for a tricky issue
+                            related to our customization of the template."</p>
+                        <h4 class="font-semibold text-lg mb-1 text-gray-600"> Brightlight books</h4>
+                        <span class="text-gray-600">Ubold Customer</span>
+                        <img src="../dist/img/quote.png" class="absolute bottom-0 right-0" alt="quote" title="quote">
+                    </div>
+                    <div class="testimonial-items bg-white p-6 relative shadow-[0px_0px_11px_-5px]">
+                        <img src="../dist/img/user-3.jpg" class="rounded-full w-20" alt="">
+
+                        <p class="text-xl font-semibold my-4 text-gray-600">" Excellent support for a tricky issue
+                            related to our customization of the template."</p>
+                        <h4 class="font-semibold text-lg mb-1 text-gray-600"> Brightlight books</h4>
+                        <span class="text-gray-600">Ubold Customer</span>
+                        <img src="../dist/img/quote.png" class="absolute bottom-0 right-0" alt="quote" title="quote">
+                    </div>
+                    <div class="testimonial-items bg-white p-6 relative shadow-[0px_0px_11px_-5px]">
+                        <img src="../dist/img/user-2.jpg" class="rounded-full w-20" alt="">
+
+                        <p class="text-xl font-semibold my-4 text-gray-600">" Excellent support for a tricky issue
+                            related to our customization of the template."</p>
+                        <h4 class="font-semibold text-lg mb-1 text-gray-600"> Brightlight books</h4>
+                        <span class="text-gray-600">Ubold Customer</span>
+                        <img src="../dist/img/quote.png" class="absolute bottom-0 right-0" alt="quote" title="quote">
+                    </div>
+                    <div class="testimonial-items bg-white p-6 relative shadow-[0px_0px_11px_-5px]">
+                        <img src="../dist/img/user-1.jpg" class="rounded-full w-20" alt="">
+
+                        <p class="text-xl font-semibold my-4 text-gray-600">" Excellent support for a tricky issue
+                            related to our customization of the template."</p>
+                        <h4 class="font-semibold text-lg mb-1 text-gray-600"> Brightlight books</h4>
+                        <span class="text-gray-600">Ubold Customer</span>
+                        <img src="../dist/img/quote.png" class="absolute bottom-0 right-0" alt="quote" title="quote">
+                    </div>
+                    <div class="testimonial-items bg-white p-6 relative shadow-[0px_0px_11px_-5px]">
+                        <img src="../dist/img/user-2.jpg" class="rounded-full w-20" alt="">
+
+                        <p class="text-xl font-semibold my-4 text-gray-600">" Excellent support for a tricky issue
+                            related to our customization of the template."</p>
+                        <h4 class="font-semibold text-lg mb-1 text-gray-600"> Brightlight books</h4>
+                        <span class="text-gray-600">Ubold Customer</span>
+                        <img src="../dist/img/quote.png" class="absolute bottom-0 right-0" alt="quote" title="quote">
+                    </div>
+                    <div class="testimonial-items bg-white p-6 relative shadow-[0px_0px_11px_-5px]">
+                        <img src="../dist/img/user-3.jpg" class="rounded-full w-20" alt="">
+
+                        <p class="text-xl font-semibold my-4 text-gray-600">" Excellent support for a tricky issue
+                            related to our customization of the template."</p>
+                        <h4 class="font-semibold text-lg mb-1 text-gray-600"> Brightlight books</h4>
+                        <span class="text-gray-600">Ubold Customer</span>
+                        <img src="../dist/img/quote.png" class="absolute bottom-0 right-0" alt="quote" title="quote">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- valution -->
+        <section class="valution bg-[#F8F9FA] py-20">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap">
+                    <div class="lg:w-3/12 md:w-6/12 w-full">
+                        <div class="valution-items text-center py-4" id="counter">
+                            <h2 class="font-bold text-3xl counter-value text-gray-600" data-count="825">15</h2>
+                            <p class="text-xl text-gray-600 mt-2">GLOBAL BRANDS</p>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/12 md:w-6/12 w-full">
+                        <div class="valution-items text-center py-4" id="counter">
+                            <h2 class="font-bold text-3xl counter-value text-gray-600" data-count="1800">100</h2>
+                            <p class="text-xl text-gray-600 mt-2">HAPPY CLIENTS</p>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/12 md:w-6/12 w-full">
+                        <div class="valution-items text-center py-4" id="counter">
+                            <h2 class="font-bold text-3xl counter-value text-gray-600" data-count="599">100</h2>
+                            <p class="text-xl text-gray-600 mt-2">CREATIVE IDEA</p>
+                        </div>
+                    </div>
+                    <div class="lg:w-3/12 md:w-6/12 w-full">
+                        <div class="valution-items text-center py-4" id="counter">
+                            <h2 class="font-bold text-3xl counter-value text-gray-600" data-count="2000">100</h2>
+                            <p class="text-xl text-gray-600 mt-2">USER CLIENTS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section class="team py-12" id="team">
+            <div class="container mx-auto px-4">
+                <div class="team-title text-center mx-auto max-w-[550px]">
+                    <h6 class="text-gray-500 font-semibold">TEAM</h6>
+                    <h2 class="font-bold text-3xl text-gray-700 leading-[1.3] mt-4">Amazing Team</h2>
+                    <p class="text-gray-500 mt-2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                        consequuntur magni dolores.</p>
+                </div>
+                <div class="team-inner mt-12">
+                    <div class="flex flex-wrap">
+                        <div class="xl:w-3/12 md:w-6/12 w-full">
+                            <div class="team-items my-4 md:m-4 xl:mx-4 xl:my-0">
+                                <div class="team-img bg-[#F2F4F6]">
+                                    <img src="../dist/img/1 (1).png" alt="" class="mx-auto">
+                                </div>
+                                <div class="team-content p-4 text-center">
+                                    <h4 class="font-semibold text-xl text-gray-600">Adela White</h4>
+                                    <p>Web Designer, USA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 md:w-6/12 w-full">
+                            <div class="team-items my-4 md:m-4 xl:mx-4 xl:my-0">
+                                <div class="team-img bg-[#F2F4F6]">
+                                    <img src="../dist/img/2 (1).png" alt="" class="mx-auto">
+                                </div>
+                                <div class="team-content p-4 text-center">
+                                    <h4 class="font-semibold text-xl text-gray-600">Ronnie Cooper</h4>
+                                    <p>Graphic Designer, USA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 md:w-6/12 w-full">
+                            <div class="team-items my-4 md:m-4 xl:mx-4 xl:my-0">
+                                <div class="team-img bg-[#F2F4F6]">
+                                    <img src="../dist/img/3 (1).png" alt="" class="mx-auto">
+                                </div>
+                                <div class="team-content p-4 text-center">
+                                    <h4 class="font-semibold text-xl text-gray-600">Helen Kim</h4>
+                                    <p>Web Developer, USA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-3/12 md:w-6/12 w-full">
+                            <div class="team-items my-4 md:m-4 xl:mx-4 xl:my-0">
+                                <div class="team-img bg-[#F2F4F6]">
+                                    <img src="../dist/img/4.png" alt="" class="mx-auto">
+                                </div>
+                                <div class="team-content p-4 text-center">
+                                    <h4 class="font-semibold text-xl text-gray-600">Howard Shiflet</h4>
+                                    <p>PHP Developer, USA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#F8F9FA] mt-24">
+        <div class="container mx-auto px-4">
+            <div class="md:-translate-y-1/2 mb-14 md:mb-0">
+                <div
+                    class="newsletter-inner relative  p-12 bg-[#343a40] before:w-full before:h-full before:absolute before:bg-[url(../img/cta-bg.png)] before:bg-cover before:bg-no-repeat before:top-0 before:left-0 before:-z-10 z-0">
+                    <div class="flex flex-wrap items-center">
+                        <div class="lg:w-6/12 w-full">
+                            <div class="newsletter-items text-center lg:text-start mb-8 lg:mb-0">
+                                <h3 class="text-white text-3xl font-semibold">Subscribe our newsletter</h3>
+                                <p class="text-white text-[18px] mt-4 opacity-50">Et harum quidem rerum facilis est us
+                                    et expedita distinctio am libero
+                                    tempore cum
+                                    soluta nobis.</p>
+                            </div>
+                        </div>
+                        <div class="lg:w-6/12 w-full">
+                            <div class="newsletter-items ">
+                                <form>
+                                    <div class="relative w-3/4 mx-auto lg:mx-0 lg:ms-auto">
+                                        <div class="relative">
+                                            <input type="text" placeholder="Enter Email Address"
+                                                class="py-5 w-full px-10 inline-block rounded-md bg-[#4D5257]">
+                                            <i
+                                                class="ri-mail-line inline-block absolute top-1/2 left-0 opacity-70 -translate-y-1/2 text-white ps-4"></i>
+                                        </div>
+                                        <a href="javascipt:void(0)"
+                                            class="py-3 px-6 rounded-md bg-emerald-500 inline-block text-xl text-white sm:absolute sm:top-1/2 sm:right-1 sm:-translate-y-1/2 mt-4 sm:mt-0">Get
+                                            Access</a>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="footer-inner  pb-24 relative before:w-full before:h-full before:absolute before:bg-[url(../img/footer-light-bg.png)]  before:bg-center  before:bg-no-repeat before:top-0 before:left-0 before:-z-10 z-0">
+                <div class="flex flex-wrap">
+                    <div class="2xl:w-1/5  w-full">
+                        <div class="contect-items mx-4 pb-8 text-center 2xl:text-start 2xl:pb-0">
+                            <img src="../dist/img/logo-dark.png" alt="logo-dark" title="logo" class="mx-auto 2xl:mx-0">
+                            <p class="mt-8 text-lg opacity-60 font-semibold">Hello@coderthe.com</p>
+                            <p class="opacity-60 text-lg font-semibold">+01 ( 1234 567 890 )</p>
+                        </div>
+                    </div>
+                    <div class="2xl:w-1/5 lg:w-3/12 md:w-6/12 w-full">
+                        <div class="contect-items mx-4 my-4 md:m-4 2xl:mx-4 2xl:my-0">
+                            <h3 class="text-black text-2xl font-semibold mb-8">About Us
+                            </h3>
+                            <ul>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Support Center</a>
+                                </li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Customer Support</a>
+                                </li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">About Us</a></li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Copyright</a></li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Popular Campaign</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="2xl:w-1/5 lg:w-3/12 md:w-6/12 w-full">
+                        <div class="contect-items mx-4 my-4 md:m-4 2xl:mx-4 2xl:my-0">
+                            <h3 class="text-black text-2xl font-semibold mb-8">Our
+                                Information</h3>
+                            <ul>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Return Policy</a>
+                                </li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Privacy Policy</a>
+                                </li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Terms &
+                                        Conditions</a>
+                                </li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Site Map</a></li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Store Hours</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="2xl:w-1/5 lg:w-3/12 md:w-6/12 w-full">
+                        <div class="contect-items mx-4 my-4 md:m-4 2xl:mx-4 2xl:my-0">
+                            <h3 class="text-black text-2xl font-semibold mb-8">My Account
+                            </h3>
+                            <ul>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Press Inquiries</a>
+                                </li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Social Media
+                                        Directories</a></li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Images & B-roll</a>
+                                </li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Permissions</a></li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Speaker Requests</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="2xl:w-1/5 lg:w-3/12 md:w-6/12 w-full">
+                        <div class="contect-items mx-4 my-4 md:m-4 2xl:mx-4 2xl:my-0">
+                            <h3 class="text-black text-2xl font-semibold mb-8">Policy</h3>
+                            <ul>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Application Security
+                                    </a></li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Softwere
+                                        Principles</a>
+                                </li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Unwanted Softwere
+                                        Policy</a></li>
+                                <li><a href="javascript:void(0)"
+                                        class="inline-block py-2 text-lg opacity-60 font-semibold">Risponsible Supply
+                                        Chain</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- top-to-back -->
+    <a href="javascript:void(0)"
+        class="top-to-back fixed bottom-8 right-8 h-10 w-10 text-center leading-10 bg-black text-white rounded-lg text-xl z-30 hidden"><i
+            class="ri-arrow-up-s-line"></i></a>
+    <!-- js -->
+
+    <script src="../dist/js/jquery-3.7.1.min.js"></script>
+    <script src="../dist/js/owl.carousel.min.js"></script>
+    <script src="../dist/js/myscript.js"></script>
+</body>
+
+</html>

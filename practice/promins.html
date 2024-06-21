@@ -1,0 +1,13 @@
+<script>
+
+      function getdate(data) {
+            return new Promise((resolve, reject) => {
+                  setTimeout(() => {
+                        console.log(data);
+                        resolve("suceess");
+                  }, 5000);
+
+            })
+      }
+      let news = getdate(4);
+</script>

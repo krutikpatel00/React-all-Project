@@ -1,0 +1,129 @@
+<!-- (1) function as varibal -->
+<script>
+    // let abc = function (a, b) {
+    //     console.log(a + b);
+    // }
+    // abc(45, 45)
+</script>
+
+
+<!-- (2) areoy function -->
+<script>
+    // let abc = (a, b) => {
+    //     console.log(a + b);
+    // }
+    // abc(4, 45);
+</script>
+
+
+<!-- (3) call back function -->
+<script>
+    // // ONE FUNCTION MA BIJA  FUNCTION NE CALL KARVA MA AAVE TERNE CALL BACK FUNCTION
+    // function abc(a, call) {
+    //     console.log(a);
+    //     call()
+    // }
+
+    // abc("krutik", cdf)
+    // function cdf(b) {
+    //     console.log("hello");
+    // }
+</script>
+
+
+<!-- (4) closure function  -->
+<!-- global varibal  function ni ader jeno use tye ne closure funtion   -->
+<script>
+
+    // let a = 15;
+    // function abc() {
+    //     let b = 45;
+    //     function cdf() {
+    //         let c = 30;
+    //         return a + b + c;
+    //     }
+    //     console.log(cdf());
+    // }
+    // abc();
+</script>
+
+<!-- (5) Recursion -->
+<!-- function ni ader call karva ma ave tene and loop ni jevu kam kare -->
+
+<script>
+    // function abc(n) {
+    //     if (n == 0) {
+    //         return 0;
+    //     }
+    //     console.log(n);
+    //     abc(n - 1)
+    // }
+    // abc(10);
+</script>
+
+
+<!-- (6) nested function  -->
+<!-- function ni ader biju funtion banavama aave tene  -->
+<script>
+
+    // function abc() {
+    //     let a = 10;
+    //     console.log(a);
+    //     function dkg() {
+    //         let b = 45;
+    //         console.log(b);
+    //     }
+    //     dkg();
+    // }
+    // abc();
+</script>
+
+<!-- (7) immedately invoked function expression (IIFE) -->
+<!-- <Script>
+    (function (a, b) {
+        console.log(a + b);
+    })(10, 15);
+
+</Script> -->
+
+
+
+<script>
+    // function abc() {
+    //     console.log("abc 1");
+    // }
+    // function def(a) {
+    //     console.log(a);
+    //     abc();
+    // }
+    // def(15)
+
+</script>
+
+
+<script>
+    // function b(c) {
+    //      console.log(c());
+    // }
+    // function a() {
+    //       let p = "krutik"
+    //       let d = " patel"
+    //       return p + d;
+    // }
+    // b(a);
+</script>
+
+
+<script>
+
+    function abc() {
+
+        function asd() {
+            let a = 45;
+            return a;
+        }
+        return asd();
+    }
+    console.log(abc()); 
+
+</script>

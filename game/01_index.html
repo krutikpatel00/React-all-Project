@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <div>
+            <h1>radom number :<span id="redom"></span></h1>
+            <input type="text" id="num">
+            <button onclick="numCh()">click</button>
+            <p id="enter">ans :</p>
+
+            <table border="">
+                  <tr>
+                        <th>win</th>
+                        <th>loss</th>
+                  </tr>
+                  <tr>
+                        <th id="win">0</th>
+                        <th id="loss">0</th>
+                  </tr>
+            </table>
+      </div>
+
+
+      <script>
+
+            let score = {
+                  win: 0,
+                  loss: 0
+            }
+
+
+            function numCh() {
+                  let red = Math.floor(Math.random() * 9);
+                  let arry = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+                  let redomNum = arry[red]
+                  console.log(redomNum);
+                  let numBer = parseInt(document.getElementById("num").value);
+                  if (numBer === redomNum) {
+                        document.getElementById("enter").innerHTML = `ans : win`;
+                        score.win++;
+                        document.getElementById("win").innerText = score.win;
+
+                  } else {
+                        document.getElementById("enter").innerHTML = `ans : loss`;
+                        score.loss++;
+                        document.getElementById("loss").innerText = score.loss;
+
+                  }
+                  let string = JSON.stringify(score);
+                  localStorage.setItem("score", string)
+                  console.log(JSON.parse(localStorage.getItem("score")));
+
+            }
+
+      </script>
+</body>
+
+
+</html>

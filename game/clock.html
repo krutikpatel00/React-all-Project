@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            body {
+                  background-color: rgb(35, 34, 34);
+            }
+
+            .clock {
+                  height: 100vh;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+            h3 {
+                  color: white;
+                  font-size: 50px;
+            }
+      </style>
+
+</head>
+
+<body>
+      <div class="clock">
+            <h3>
+                  <span id="hov"></span>: <span id="min"></span>: <span id="sec"></span> <span id="ap"></span>
+            </h3>
+      </div>
+
+      <script>
+
+            function sects() {
+                  let date = new Date();
+                  let sec = document.getElementById("sec");
+                  sec.innerHTML = date.getSeconds();
+            }
+            sects();
+
+            function minutes() {
+                  let date = new Date();
+                  let min = document.getElementById("min");
+                  min.innerHTML = date.getMinutes();
+            }
+            minutes();
+
+            function hover() {
+                  let date = new Date();
+                  let hove = document.getElementById("hov");
+                  let ap = document.getElementById("ap");
+                  let howuer = date.getHours();
+                  hove.innerHTML = date.getHours();
+
+                  if (howuer > 1 && howuer < 12) {
+                        ap.innerHTML = "AM";
+                  } else {
+                        ap.innerHTML = "PM";    
+                  }
+
+            }
+            hover();
+
+            setInterval(hover, 1000);
+            setInterval(minutes, 1000)
+            setInterval(sects, 1000);
+            
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .btn-body {
+                  display: none;
+            }
+
+            .active,
+            .btn:hover {
+                  background-color: aqua;
+            }
+      </style>
+</head>
+
+<body>
+
+      <div>
+            <button class="btn">click</button>
+            <div class="btn-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ipsum autem. Fugiat,
+                        consequatur pariatur ipsa nulla provident sapiente, corrupti illum libero odio quia, eveniet
+                        aperiam amet sit deleniti dolore praesentium.</p>
+            </div>
+      </div>
+      <div>
+            <button class="btn">click</button>
+            <div class="btn-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ipsum autem. Fugiat,
+                        consequatur pariatur ipsa nulla provident sapiente, corrupti illum libero odio quia, eveniet
+                        aperiam amet sit deleniti dolore praesentium.</p>
+            </div>
+      </div>
+      <div>
+            <button class="btn">click</button>
+            <div class="btn-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ipsum autem. Fugiat,
+                        consequatur pariatur ipsa nulla provident sapiente, corrupti illum libero odio quia, eveniet
+                        aperiam amet sit deleniti dolore praesentium.</p>
+            </div>
+      </div>
+
+      <script>
+
+            let btn = document.querySelectorAll(".btn");
+            console.log(btn);
+
+
+            for (let i = 0; i < btn.length; i++) {
+                  console.log(i);
+                  btn[i].addEventListener("click", function () {
+                        console.log(btn[i]);
+                        this.classList.toggle("active")
+                        var btnBody = this.nextElementSibling;
+                        if (btnBody.style.display === "block") {
+                              btnBody.style.display = "none";
+                        } else {
+                              btnBody.style.display = "block";
+                        }
+                  })
+
+            }
+
+
+
+      </script>
+</body>
+
+</html>

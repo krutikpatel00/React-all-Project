@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-active {
+  top: 0;
+  bottom: 0;
+  transition: 1s all;
+}
+
+.header-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: header-active 1s linear;
+  background-color: #353535;
+}
+
+@keyframes header-active {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.banner-img-animation {
+  animation: banner-animation 8s linear infinite alternate;
+}
+@keyframes banner-animation {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    filter: brightness(80%);
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+.about-title h1,
+.skills-title h2,
+.project-title h2,
+.contact-title h2 {
+  -webkit-text-stroke: 2px #d9d9d9;
+}
+.about-title h1 span,
+.skills-title H2 span,
+.project-title h2 span,
+.contact-title h2 span {
+  -webkit-text-stroke: 0px transparent;
+}
+
+/* loding */
+
+

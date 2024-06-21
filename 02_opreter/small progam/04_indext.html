@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            table {
+                  border-collapse: collapse;
+            }
+
+            th,
+            td {
+                  padding: 10px 15px;
+            }
+      </style>
+</head>
+
+<body>
+      <table border="">
+            <tr>
+                  <th>degree celsius</th>
+                  <th><input type="text" value="0" id="celsius"></th>
+            </tr>
+            <tr>
+                  <th> fahrenheit</th>
+                  <th>
+                        <p id="fahrenheit">32</p>
+                  </th>
+
+            </tr>
+
+            <tr>
+                  <th>
+                        <button onclick="clu()">click</button>
+                  </th>
+            </tr>
+      </table>
+
+      <script>
+            function clu() {
+                  let celsius = parseInt(document.getElementById("celsius").value);
+                  let fahrenheit = celsius * (9 / 5) + 32;
+
+                  document.getElementById("fahrenheit").innerHTML = fahrenheit;
+            }
+
+      </script>
+</body>
+
+</html>

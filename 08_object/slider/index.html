@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            * {
+                  padding: 0;
+                  margin: 0;
+                  box-sizing: border-box;
+            }
+
+            body {
+                  font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #slider {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                  height: 100dvh;
+            }
+
+            #slider-items {
+                  padding: 20px;
+                  width: 1000px;
+                  position: relative;
+                  text-align: center;
+                  border-radius: 20px;
+                  padding: 200px 50px;
+            }
+
+            #qut {
+                  color: white;
+                  font-size: 30px;
+
+            }
+
+            #auther {
+                  color: rgb(255, 255, 255);
+                  font-size: 18px;
+                  margin-top: 25px;
+            }
+
+            #img {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  z-index: -1;
+                  border-radius: 20px;
+            }
+
+            #next {
+                  padding: 10px 40px;
+                  margin: 30px 0 0 0;
+                  border: none;
+                  background-color: rgb(66, 188, 0);
+                  border-radius: 10px;
+                  color: white;
+                  font-size: 18px;
+            }
+      </style>
+</head>
+
+<body>
+      <div id="slider">
+            <div id="slider-items">
+                  <h2 id="qut">45</h2>
+                  <p id="auther">54</p>
+                  <img src="" alt="img" id="img">
+            </div>
+            <div>
+                  <button onclick="sliderChenge()" id="next">click</button>
+            </div>
+      </div>
+
+      <script>
+            let quotes = [
+                  {
+                        quo: "Life is about making an impact, not making an income",
+                        auther: "--Kevin Kruse",
+                        Image: "./img/img1.avif",
+                        bgColor: "#00000091"
+                  },
+                  {
+                        quo: "Strive not to be a success, but rather to be of value",
+                        auther: "--Albert Einstein",
+                        Image: "./img/img2.avif",
+                        bgColor: "#051a2cbd"
+                  },
+                  {
+                        quo: "An unexamined life is not worth living.",
+                        auther: "--Robert Fros",
+                        Image: "./img/img3.avif",
+                        bgColor: "#47391659"
+                  },
+                  {
+                        quo: "Eighty percent of success is showing up. ",
+                        auther: "--Amelia Earhart",
+                        Image: "./img/img4.avif",
+                        bgColor: "#27105b70"
+                  },
+                  {
+                        quo: "We become what we think about.",
+                        auther: "--Earl Nightingale",
+                        Image: "./img/img5.avif",
+                        bgColor: "#630e0e82"
+                  }
+            ]
+
+
+
+            let quo = document.getElementById("qut");
+            let auther = document.getElementById("auther");
+            let bgColor = document.getElementById("slider-items");
+            let bgImg = document.getElementById("img");
+
+            quo.innerHTML = quotes[0].quo;
+            auther.innerHTML = quotes[0].auther;
+            bgColor.style.backgroundColor = quotes[0].bgColor;
+            bgImg.src = quotes[0].Image;
+
+            let i = 1;
+            function sliderChenge() {
+                  if (i == quotes.length) {
+                        i = 0;
+                  }
+                  quo.innerHTML = quotes[i].quo;
+                  auther.innerHTML = quotes[i].auther;
+                  bgColor.style.backgroundColor = quotes[i].bgColor;
+                  bgImg.src = quotes[i].Image
+
+                  i++;
+                  
+            }
+
+      </script>
+
+</body>
+
+</html>

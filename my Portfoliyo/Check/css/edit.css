@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.project-view > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-inline: 1px solid rgb(202, 202, 202);
+  border-bottom: 1px solid rgb(202, 202, 202);
+  border-radius: 0 0 10px 10px;
+}
+.portfolio-container figure {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 1px solid rgb(202, 202, 202);
+}
+.github-view {
+  position: static !important;
+  font-size: 20px;
+  display: inline-block;
+}
+.git-view {
+  position: static !important;
+  display: inline-block;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+}
+.git-view:hover,
+.github-view:hover {
+  color: rgb(121, 121, 121);
+}

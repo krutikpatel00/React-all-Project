@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <h1>
+            <input type="text" id="id">
+            <input type="email" id="id1">
+            <input type="number" id="id2">
+            <button onclick=" abc()">click</button>
+            <p id="name"></p>
+      </h1>
+      <script>
+
+            let a = [];
+            let b = [];
+
+            function abc() {
+                  let input = document.getElementById("id")
+                  let input2 = document.getElementById("id2")
+                  let input1 = document.getElementById("id1")
+                  a.push(input.value);
+                  a.push(input1.value);
+                  a.push(input2.value);
+                  b.push(a);
+                  localStorage.setItem("bigAray", JSON.stringify(b))
+                  a = [];
+                  // console.log(b);
+                  let getA = localStorage.getItem("bigAray");
+                  console.log(getA);
+
+            }
+
+
+
+
+
+
+
+
+
+      </script>
+
+</body>
+
+</html>

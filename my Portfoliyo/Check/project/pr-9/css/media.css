@@ -1,0 +1,19 @@
+@media (min-width: 992px) {
+  .navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .dropdown-menus {
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    border: 1px solid var(--color-border) !important;
+    background-color: var(--background-inner);
+    
+  }
+  header nav ul li:hover .dropdown-menus {
+    visibility: visible;
+    opacity: 1;
+  }
+}

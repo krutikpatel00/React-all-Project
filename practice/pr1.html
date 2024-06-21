@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+
+      <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus consequuntur blanditiis, quas ab
+            fuga quasi laudantium, fugiat quae dicta nulla magni optio temporibus eaque deserunt? Nihil expedita sit
+            asperiores corporis?
+      </p>
+
+      <script>
+
+            let a = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus consequuntur blanditiis'
+
+            let wordMaxLength = (x) => {
+
+                  let b = x.trim().split(' ').reduce((previous, current) => {
+                        return current.length > previous.length ? current : previous
+                  }, '')
+                  return b
+            }
+            wordMaxLength(a)
+            console.log(wordMaxLength(a).length);
+
+            let c = "hello this"
+
+            const reverseString = (x) => {
+                  let b = x.split(" ").sort((a, b) => a < b ? 1 : -1)
+                  console.log(b);
+                  return b
+            }
+
+            reverseString(c)
+
+
+
+            const isPalindrome = (x) => {
+
+            }
+            isPalindrome("A man, a plan, a canal, Panama!")
+
+            let h = 'this is a man'
+
+            function mynew(h) {
+
+                  let d = h.split(' ').map((item) => {
+                        return `${item[0].toUpperCase()}${item.slice(1)}`
+                  })
+
+                  return `#${d.join("")}`
+            }
+            mynew(h)
+            console.log(mynew(h));
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<script>
+
+    class Book {
+        constructor(bookName, bookLenguage) {
+            this.book_Name = bookName;
+            this.book_Lenguage = bookLenguage;
+        }
+        book() {
+            console.log("book name is " + this.book_Name + " and lenguage is " + this.book_Lenguage);
+        }
+    }
+    class BookRighter extends Book {
+        constructor(bookName, bookLenguage, authorName, bookYear) {
+            super(bookName, bookLenguage)
+            this.author_Name = authorName;
+            this.book_year = bookYear;
+        }
+        boolRighter() {
+            this.book();
+            console.log(this.author_Name);
+            console.log(this.book_year);
+        }
+
+    }
+    class Book_print extends BookRighter {
+        constructor(bookName, bookLenguage, authorName, bookYear, companyName, companyYear, companyCity) {
+            super(bookName, bookLenguage, authorName, bookYear)
+            this.companyName = companyName;
+            this.companyYear = companyYear;
+            this.companyCity = companyCity;
+
+        }
+        bookPrint() {
+            this.boolRighter()
+            console.log(this.companyName);
+            console.log(this.companyYear);
+            console.log(this.companyCity);
+        }
+    }
+    let book = new Book_print("sic", "guj", "krutik patel", 2023, "pi company", 2024, "surat");
+    book.bookPrint();
+</script>

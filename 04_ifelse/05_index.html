@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <title>Document</title>
+      <style>
+            #btn {
+
+                  height: 40px;
+                  width: 40px;
+                  text-align: center;
+                  line-height: 40px;
+                  font-size: 20px;
+
+
+            }
+
+            .odd {
+                  background-color: royalblue;
+                  color: white;
+            }
+
+            .event {
+                  background-color: seagreen;
+                  color: white;
+            }
+      </style>
+</head>
+
+<body>
+
+      <h1 id="mess"></h1>
+
+      <button id="btn" onclick="btnCou()">0</button>
+      <script>
+
+
+            let btnCount = 0;
+            function btnCou() {
+                  let btn = document.getElementById("btn");
+                  btnCount++;
+                  if (btnCount % 2 === 0) {
+                        btn.classList.add('event')
+                        btn.classList.remove('odd')
+                  } else {
+                        btn.classList.add('odd')
+                        btn.classList.remove('event')
+                  }
+                  btn.innerText = btnCount;
+            }
+
+            function mesege(name = 'krutik') {
+                  let date = new Date();
+                  let howur = date.getHours();
+                  let mess = document.getElementById("mess");
+                  if (howur > 5 && howur < 12) {
+                        mess.innerHTML = `good moreing ${name}`;
+                  } else if (howur >= 12 && howur <= 18) {
+                        mess.innerHTML = `good afternone ${name}`
+                  } else {
+                        mess.innerHTML = `good night ${name}`
+                  }
+            }
+            mesege()
+
+
+
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

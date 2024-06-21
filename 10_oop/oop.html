@@ -1,0 +1,53 @@
+<script>
+    let name = prompt("enter the name")
+    let grn = parseInt(prompt("enter the gr number"))
+    let guj = parseInt(prompt("enter the guj mark"))
+    let math = parseInt(prompt("enter the math mark"))
+    let sic = parseInt(prompt("enter the sic mark"))
+
+    class student {
+        stu_detail(nam, grnumber) {
+            this.name = nam;
+            this.gr = grnumber;
+
+        }
+        stu_mark(g, m, s) {
+            this.guj = g;
+            this.math = m;
+            this.sic = s;
+            this.total = this.guj + this.sic + this.math;
+            this.ave = this.total / 3;
+            this.stu_grade()
+        }
+        stu_grade(ave) {
+            if (this.ave >= 35 && this.ave < 60) {
+                this.grade = "c";
+            } else if (this.ave >= 60 && this.ave < 70) {
+                this.grade = "B";
+            } else if (this.ave >= 70 && this.ave <= 100) {
+                this.grade = "A";
+            } else {
+                this.grade = "fiall"
+            }
+            this.get();
+        }
+        get() {
+            console.log(`name : ${this.name}`);
+            console.log(`Gr n. : ${this.gr}`);
+            console.log(`gujrati : ${this.guj}`);
+            console.log(`math : ${this.math}`);
+            console.log(`sic : ${this.sic}`);
+            console.log(`total : ${this.total}`);
+            console.log(`averege : ${this.ave}%`);
+            console.log(`grand : ${this.grade}`);
+        }
+
+    }
+
+    let stus = new student;
+    stus.stu_detail(name, grn);
+    stus.stu_mark(guj, math, sic)
+
+
+
+</script>

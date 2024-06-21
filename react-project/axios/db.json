@@ -1,0 +1,42 @@
+{
+  "books": [
+    {
+      "id": "7be6",
+      "title": "krutik patel",
+      "booktype": [
+        "Classics",
+        "Crime"
+      ],
+      "price": "123",
+      "auther": "king",
+      "pages": "0-200",
+      "message": "krutik"
+    },
+    {
+      "id": "1f2c",
+      "title": "krutik",
+      "booktype": [],
+      "price": "abc"
+    },
+    {
+      "id": "2762",
+      "title": "krutik",
+      "booktype": []
+    },
+    {
+      "id": "5d5f",
+      "title": "skdjf",
+      "booktype": []
+    },
+    {
+      "id": "0e81",
+      "title": "ekrj",
+      "booktype": []
+    },
+    {
+      "id": "0bff",
+      "title": "nndkf",
+      "booktype": []
+    }
+  ]
+}

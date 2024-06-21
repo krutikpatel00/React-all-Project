@@ -1,0 +1,52 @@
+<script>
+      let input = parseInt(prompt("enter 1.circle 2.rectangle 3.traezoid"))
+      if (input == "1") {
+            let radius = parseInt(prompt("enter redous value"));
+            class Circle {
+                  circle(r) {
+                        this.area = 3.14 * r * r;
+
+                  }
+                  valuePrint() {
+                        console.log(`circle : ${Math.floor(this.area)}`);
+                  }
+            }
+            let cir = new Circle;
+
+            cir.circle(radius);
+            cir.valuePrint();
+
+      } else if (input == "2") {
+            let l = parseInt(prompt("enter length value"))
+            let w = parseInt(prompt("enter rectangle value"))
+            class Rectangle {
+                  rectangle(l, w) {
+                        this.area = l * w;
+                  }
+                  valuePrint() {
+                        console.log(`Rectangle : ${this.area}`);
+                  }
+            }
+            let rec = new Rectangle;
+            rec.rectangle(l, w);
+            rec.valuePrint();
+      } else if (input == "3") {
+            let b = parseInt(prompt("enter base value"))
+            let l = parseInt(prompt("enter rectangle value"))
+            class Triangle {
+                  triangle(b, l) {
+                        this.area = 1 / 2 * b * l;
+                  }
+                  valuePrint() {
+                        console.log(`triangle : ${this.area}`);
+                  }
+            }
+            let triangle = new Triangle;
+
+            triangle.triangle(b, l);
+            triangle.valuePrint();
+      }
+      else {
+            console.log("not valide number");
+      }
+</script>

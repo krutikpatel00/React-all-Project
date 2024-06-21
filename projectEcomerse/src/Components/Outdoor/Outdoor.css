@@ -1,0 +1,6 @@
+.bg-outdoor-img {
+  background-image: url("../../../public/Images/outdoor-img.png"); 
+  background-size: cover;
+  background-position: center;
+ 
+}

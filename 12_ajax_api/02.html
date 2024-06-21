@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            ul {
+                  list-style: none;
+            }
+      </style>
+</head>
+
+<body>
+      <input type="text" id="input" value='rrr'>
+      <button class="btn" onclick="moveiApi()">xlick</button>
+      <div id="abc">
+            <img src="" alt="">
+            <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+            </ul>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+      <script>
+            function moveiApi() {
+                  let valueid = document.querySelector("#input").value;
+                  console.log(valueid);
+                  $.ajax({
+                        type: "get",
+                        url: `http://www.omdbapi.com/?apikey=f6adc496&t=${valueid}`,
+
+                        success: function (data) {
+                              console.log(data);
+                              let { Title, Year, Rated, Released, Runtime, Genre, Director, Writer, Actors, Plot, Language, Country, Awards, Poster, Ratings, Metascore, imdbRating, imdbVotes, imdbID, Type, DVD, BoxOffice, Production, Website, Response } = data;
+
+                             
+
+                              let on = document.querySelector("#abc").innerHTML = `
+                              <img src="${Poster}" alt="">
+                              <ul>
+                                    <li>${Title}</li>
+                                    <li>${Year}</li>
+                                    <li>${Rated}</li>
+                                    <li>${Writer}</li>
+                                    <li>${BoxOffice}</li>
+                                    <li></li>
+                                    <li></li>
+                              </ul>
+                              
+                              `
+
+                        }
+                  });
+            }
+      </script>
+</body>
+
+</html>

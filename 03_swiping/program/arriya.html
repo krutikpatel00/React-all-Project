@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<table border="">
+      <tr>
+            <th>circle(π x radius2)</th>
+            <th>
+                  <input type="text" id="circle">
+            </th>
+      </tr>
+      <tr>
+            <th>
+                  area :
+            </th>
+            <th>
+                  <p id="area"></p>
+            </th>
+      </tr>
+      <tr>
+            <th colspan="2">
+                  <button onclick="circle()">click</button>
+            </th>
+      </tr>
+</table>
+<script>
+      function circle() {
+            let Pi = Math.PI;
+            let circle = parseInt(document.getElementById("circle").value);
+
+            let area = Pi * (circle ** 2);
+
+            document.getElementById("area").innerHTML = area;
+      }
+</script>
+
+<body>
+
+</body>
+
+</html>

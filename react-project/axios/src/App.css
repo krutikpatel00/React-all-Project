@@ -1,0 +1,35 @@
+.button-btn {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transform: 0.3s all;
+  -webkit-transform: 0.3s all;
+  -moz-transform: 0.3s all;
+  -ms-transform: 0.3s all;
+  -o-transform: 0.3s all;
+}
+.button-btn:hover {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black !important;
+}
+
+.pagination-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  margin: 0 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

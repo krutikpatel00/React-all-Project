@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+            body {
+                  background-color: rgba(2, 2, 2, 0.689);
+                  color: aliceblue;
+            }
+            * {
+                  padding: 0;
+                  margin: 0;
+                  box-sizing: border-box;
+            }
+
+            h1 {
+                  text-align: center;
+                  font-size: 50px;
+                  margin-bottom: 30px;
+            }
+
+            .box {
+                  background-color: rgb(95, 86, 86);
+            }
+
+            .input-list,
+            .input-date {
+                  background-color: rgb(170, 170, 170);
+                  outline: none;
+                  border: none;
+                  padding: 10px 0;
+                  border-radius: 8px;
+                  font-size: 18px;
+                  margin: 10px 0;
+            }
+
+            .btn {
+                  outline: none;
+                  border: none;
+                  padding: 10px;
+                  border-radius: 8px;
+            }
+
+            .todo-list {
+                  padding: 10px 0;
+                  color: black;
+                  display: grid;
+                  grid-template-columns: 200px 200px 200px;
+
+            }
+            .btn-items{
+                  color: white;
+                  font-size: 18px;
+            }
+            .delite-btn {
+                  padding: 10px 20px;
+                  outline: none;
+                  border: none;
+                  color: white;
+                  border-radius: 6px;
+                  background-color: darkcyan;
+            }
+      </style>
+</head>
+
+<body>
+      <h1>Todo App</h1>
+
+      <div class="box">
+            <input type="text" class="input-list" />
+            <input type="date" class="input-date" />
+      </div>
+      <button class="btn" onclick="inputVulue()">ADD</button>
+      <div>
+            <div class="todo-list"></div>
+      </div>
+
+      <script>
+            let toDo = [{ items: "enter", date: "07/10/2001" }];
+            displyItems();
+            function inputVulue() {
+                  let input = document.querySelector(".input-list");
+                  let date = document.querySelector(".input-date");
+                  let inputVul = input.value;
+                  let inputDet = date.value;
+
+                  // console.log(inputVul);
+                  // console.log(inputDet);
+                  toDo.push({ items: inputVul, date: inputDet });
+                  input.value = "";
+                  date.value = "";
+                  // console.log(toDo);
+                  displyItems();
+            }
+
+            function displyItems() {
+                  let displyIt = document.querySelector(".todo-list");
+                  let newHtml = "";
+
+                  for (let i = 0; i < toDo.length; i++) {
+                        let { items, date } = toDo[i]
+                        newHtml += `
+
+                              <span class="btn-items">${items}</span>
+                              <span class="btn-items">${date}</span>
+                              <button class="delite-btn" onclick='toDo.splice(${i}, 1);displyItems()'>delite</button>
+                  
+                         `;
+                  }
+                  displyIt.innerHTML = newHtml;
+            }
+      </script>
+</body>
+
+</html>

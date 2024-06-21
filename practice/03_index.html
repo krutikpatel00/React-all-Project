@@ -1,0 +1,28 @@
+<button class="btn" >3</button>
+<button class="btn" >2</button>
+<button class="btn" >1</button>
+<button class="btn" >4</button>
+<button class="btn" >5</button>
+<button class="btn" >7</button>
+<p id="inn"></p>
+<script>
+
+
+     
+      
+            let btn = document.querySelectorAll('.btn');
+            console.log(btn);
+             for (let i = 0; i < btn.length; i++) {
+                  btn[i].addEventListener("click",function(){
+                        console.log(btn[i].innerHTML );
+                  });   
+          }
+      
+       
+      
+     
+      // btn.forEach(element => {
+      //       console.log(element);
+            
+      // });
+</script>

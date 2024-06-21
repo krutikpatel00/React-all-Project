@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            table {
+                  border-collapse: collapse;
+            }
+
+            th,
+            td {
+                  padding: 10px 15px;
+            }
+      </style>
+</head>
+
+<body>
+      <table border="1">
+            <tr>
+                  <th>sub...</th>
+                  <th>mark</th>
+            </tr>
+            <tr>
+                  <th>gujarati</th>
+                  <td>
+                        <input type="text" value="0" id="guj">
+                  </td>
+            </tr>
+            <tr>
+                  <th>engligh</th>
+                  <td>
+                        <input type="text" value="0" id="eng">
+                  </td>
+            </tr>
+            <tr>
+                  <th>sic</th>
+                  <td>
+                        <input type="text" value="0" id="sic">
+                  </td>
+            </tr>
+            <tr>
+                  <th>math</th>
+                  <td>
+                        <input type="text" value="0" id="math">
+                  </td>
+            </tr>
+            <tr>
+                  <th>eco</th>
+                  <td>
+                        <input type="text" value="0" id="eco">
+                  </td>
+            </tr>
+            <tr>
+                  <th colspan="2"><button onclick="res()">click</button></th>
+            </tr>
+            <tr>
+                  <th>
+                        total :
+                  </th>
+                  <th>
+                        <p id="total">0</p>
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        aver.pars :
+                  </th>
+                  <th>
+                        <p id="pars">0</p>
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        faill / pass
+                  </th>
+                  <th>
+                        <p id="faillPass">none</p>
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        grade
+                  </th>
+                  <th>
+                        <p id="grade">none</p>
+                  </th>
+            </tr>
+
+      </table>
+
+
+      <script>
+
+            function res() {
+                  let guj = parseInt(document.getElementById("guj").value)
+                  let eng = parseInt(document.getElementById("eng").value)
+                  let sic = parseInt(document.getElementById("sic").value)
+                  let math = parseInt(document.getElementById("math").value)
+                  let eco = parseInt(document.getElementById("eco").value)
+
+
+                  let total = guj + eng + sic + math + eco;
+                  document.getElementById("total").innerHTML = total;
+
+                  let pars = total / ((100 * 5) / 100)
+                  document.getElementById("pars").innerHTML = pars;
+
+
+                  if (pars > 33) {
+                        document.getElementById("faillPass").innerHTML = "pass"
+                        if (pars > 50) {
+                              if (pars > 70) {
+                                    if (pars > 80) {
+                                          document.getElementById("grade").innerHTML = "A";
+                                    } else {
+                                          document.getElementById("grade").innerHTML = "B";
+                                    }
+                              } else {
+                                    document.getElementById("grade").innerHTML = "C";
+                              }
+                        } else {
+                              document.getElementById("grade").innerHTML = "D";
+                        }
+                  } else {
+
+                        document.getElementById("faillPass").innerHTML = "faill";
+                        document.getElementById("grade").innerHTML = "F";
+                  }
+            }
+
+
+      </script>
+</body>
+
+</html>

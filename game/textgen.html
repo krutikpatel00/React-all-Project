@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            * {
+                  padding: 0;
+                  margin: 0;
+                  box-sizing: border-box;
+            }
+
+            .box,
+            .box2 {
+                  background-color: darkcyan;
+                  padding: 40px 15px;
+                  display: flex;
+            }
+
+            .boxItem {
+                  background-color: rgb(120, 118, 111);
+                  padding: 15px;
+                  margin: 0 15px;
+            }
+      </style>
+</head>
+
+<body>
+
+      <div class="box">
+
+      </div>
+
+      <div>
+            <h2>add items ( <span id="coutItem"></span> )</h2>
+
+            <div class="box2">
+
+            </div>
+      </div>
+      <script>
+            const items = [
+                  {
+                        id: "1",
+                        name: "iphone 7",
+                        price: 4999
+                  },
+                  {
+                        id: "2",
+                        name: "iphone 8",
+                        price: 42299
+                  },
+                  {
+                        id: "3",
+                        name: "iphone 9",
+                        price: 1899
+                  }
+            ]
+
+      </script>
+      <script>
+            let bagItems = [];
+            let bagitemsget = [];
+            text();
+            function addone(id) {
+                  bagItems.push(id);
+                  console.log(bagItems);
+                  let show = document.querySelector("#coutItem");
+                  show.innerText = bagItems.length;
+                  addbagid();
+                  itensbagto()
+            };
+            function text() {
+
+                  let box = document.querySelector(".box");
+                  let htnlAdd = '';
+                  items.forEach(i => {
+                        htnlAdd += `
+                  <div class='boxItem'>
+                         <h1>${i.name}</h1>
+                         <p>price : ${i.price}</p>
+                         <button onclick="addone(${i.id})">click</button>
+                  </div>
+            `
+                        box.innerHTML = htnlAdd;
+                  });
+
+            }
+
+
+
+            function addbagid() {
+                  let box = document.querySelector(".box2");
+
+                  bagitemsget = bagItems.map((i) => {
+                        for (let k = 0; k < items.length; k++) {
+                              if (i == items[k].id) {
+                                    return items[k]
+                              }
+                        }
+                  })
+                  console.log(bagitemsget);
+
+            }
+
+            function itensbagto() {
+                  let box = document.querySelector(".box2");
+                  let htnlAdd = '';
+                  bagitemsget.forEach(i => {
+                        htnlAdd += `
+                  <div class='boxItem'>
+                         <h1>${i.name}</h1>
+                         <p>price : ${i.price}</p>
+                  </div>
+            `
+                        box.innerHTML = htnlAdd;
+                  });
+            }
+            
+
+
+      </script>
+</body>
+
+</html>

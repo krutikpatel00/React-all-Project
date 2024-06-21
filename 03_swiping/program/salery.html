@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            table {
+                  border-collapse: collapse;
+            }
+
+            th,
+            td {
+                  padding: 5px 15px;
+            }
+      </style>
+</head>
+
+<body>
+
+      <table border="">
+            <tr>
+                  <th>empoy salery :</th>
+                  <th><input type="text" id="salery"></th>
+            </tr>
+            <tr>
+                  <th>
+                        texs (2%)
+                  </th>
+                  <th>
+                        <p id="texs"></p>
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        pf (10%)
+                  </th>
+                  <th>
+                        <p id="pf"></p>
+                  </th>
+            </tr>
+            <tr>
+                  <th>
+                        total salery :
+                  </th>
+                  <th>
+                        <p id="totalSalery"></p>
+                  </th>
+            </tr>
+            <tr>
+                  <th colspan="2">
+                        <button onclick="salery()">click</button>
+                  </th>
+            </tr>
+      </table>
+
+      <script>
+            function salery() {
+                  let salery = parseInt(document.getElementById("salery").value);
+
+                  let texs = salery * (2 / 100);
+                  document.getElementById("texs").innerHTML = texs;
+
+                  let pf = salery * (10    / 100);
+                  document.getElementById("pf").innerHTML = pf;
+
+                  let totalSalery = salery - texs - pf;
+
+                  document.getElementById("totalSalery").innerHTML =totalSalery;
+
+            }
+
+
+      </script>
+</body>
+
+</html>
